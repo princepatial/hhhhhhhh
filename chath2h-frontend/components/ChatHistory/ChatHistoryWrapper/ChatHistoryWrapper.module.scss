@@ -1,0 +1,100 @@
+@import 'styles/vars.scss';
+
+.chat {
+  transition: left 0.3s linear;
+  background: $c-white;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 100vw;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  font-style: normal;
+  line-height: normal;
+
+  .box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: space-between;
+    border-radius: 100px;
+    padding: 0 2.2% 0 1.93%;
+    margin: 16px 1.93% 8px 1.1%;
+    width: auto;
+    min-height: 60px;
+    background: $c-white;
+
+    .title {
+      margin-left: 0.6%;
+      flex: 1;
+
+      .offer {
+        color: $c-limeGreen;
+      }
+
+      .need {
+        color: $c-red;
+      }
+    }
+  }
+
+  .backgroundImg {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .backToList {
+    padding: 26px 22px 0;
+    position: relative;
+    cursor: pointer;
+    color: $c-green;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  .backToListDesktopMailbox {
+    @media screen and (min-width: $breakpoint-xl) {
+      display: none;
+    }
+  }
+
+  .backToListDesktop {
+    @media screen and (min-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+}
+
+.chatDesktop {
+  @media screen and (min-width: $breakpoint-lg) {
+    position: relative;
+    left: 0;
+    flex: 1;
+  }
+}
+
+.chatDesktopMailbox {
+  @media screen and (min-width: $breakpoint-xl) {
+    position: relative;
+    left: 0;
+    flex: 1;
+  }
+}
+
+.chatActive {
+  left: 0;
+}

@@ -1,0 +1,272 @@
+@import 'styles/vars.scss';
+
+.container {
+  width: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+  background-color: white;
+  z-index: 3;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    background-color: transparent;
+    z-index: 0;
+  }
+
+  .backgroundImg {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      width: 75%;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      flex-direction: row;
+      height: calc(100vh - 64px);
+    }
+
+    .problemDetails {
+      position: relative;
+
+      background-color: white;
+      z-index: 1;
+
+      @media screen and (min-width: $breakpoint-lg) {
+        width: 465px;
+      }
+
+      .detailsMobileOpen {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        color: black;
+        width: 100%;
+        height: calc(100vh - 105px);
+        background: rgba(0, 0, 0, 0.2);
+
+        @media screen and (min-width: $breakpoint-lg) {
+          display: none;
+        }
+
+        .text {
+          background: white;
+          padding: 0 4%;
+          width: 100%;
+          min-height: 150px;
+
+          & > span {
+            word-wrap: break-word;
+            display: block;
+            border-top: 1px solid $c-lightGrey;
+            width: 100%;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 20px 0;
+          }
+        }
+      }
+
+      .timeToEnd {
+        padding: 15px 4% 0 4%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 15px;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          flex-direction: column;
+          padding: 25px 6% 24px 6%;
+          gap: 0;
+        }
+
+        .timeDetails {
+          display: flex;
+          width: 100%;
+          gap: 10%;
+          align-items: center;
+
+          @media screen and (max-width: 350px) {
+            gap: 10px;
+            flex-direction: column;
+          }
+
+          .time {
+            position: relative;
+            width: 100%;
+
+            @media screen and (min-width: $breakpoint-lg) {
+              height: 50px;
+            }
+
+            .title {
+              position: absolute;
+              font-size: 14px;
+              font-weight: 300;
+              margin-bottom: 8px;
+              top: 0;
+              left: 0;
+
+              @media screen and (min-width: $breakpoint-lg) {
+                position: static;
+              }
+            }
+          }
+
+          .details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex: 1;
+            min-width: 150px;
+            cursor: pointer;
+
+            @media screen and (min-width: $breakpoint-lg) {
+              display: none;
+            }
+
+            & > span {
+              color: $c-green;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .buttonsDetails {
+          display: flex;
+          gap: 10px;
+          position: relative;
+
+          .mobileDetails {
+            flex: 1;
+
+            @media screen and (min-width: $breakpoint-lg) {
+              display: none;
+            }
+
+            .detailsAvatar {
+              display: flex;
+              gap: 4%;
+
+              .avatar {
+                position: relative;
+                height: 100%;
+              }
+
+              .details {
+                display: flex;
+                flex-direction: column;
+                margin-top: 25px;
+                gap: 5px;
+
+                & > span {
+                  font-weight: 400;
+                  display: block;
+                  font-size: 14px;
+                }
+
+                .name {
+                  word-break: break-word;
+                  font-weight: 500;
+                }
+
+                .titleTextNeed {
+                  color: $c-red;
+                }
+
+                .titleTextOffer {
+                  color: $c-limeGreen;
+                }
+              }
+            }
+          }
+
+          .buttons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4%;
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-direction: row;
+            margin-top: 15px;
+
+            @media screen and (min-width: $breakpoint-lg) {
+              margin-top: 0px;
+              position: static;
+              justify-content: flex-start;
+              gap: 7%;
+            }
+          }
+
+          .button {
+            @media screen and (min-width: $breakpoint-lg) {
+              margin-top: 32px;
+            }
+
+            .text {
+              display: none;
+
+              @media screen and (min-width: 380px) {
+                display: block;
+              }
+            }
+
+            .textMobile {
+              display: block;
+
+              @media screen and (min-width: 380px) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .moreDetails {
+        display: none;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          display: block;
+        }
+
+        .detailsTitle {
+          height: 55px;
+          border: solid $c-lightGrey;
+          border-width: 1px 0;
+          display: flex;
+          align-items: center;
+
+          .title {
+            margin-left: 6%;
+          }
+        }
+
+        .details {
+          padding: 42px 6%;
+        }
+
+        .dog {
+          position: relative;
+          display: flex;
+          justify-content: center;
+
+          .image {
+            height: 126px;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+}

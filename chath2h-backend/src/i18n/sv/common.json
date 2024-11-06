@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "logga in på appen",
+  "email-new-mailbox-message": "Nytt meddelande i din brevlåda",
+  "email-confirmation": "Bekräftelse via e-post",
+  "email-confirmation-link": "Klicka nedan för att bekräfta din e-post",
+  "email-ignore-info": "Om du inte har begärt detta e-postmeddelande kan du ignorera det.",
+  "email-confirm": "Bekräfta",
+  "email-mailbox-message-awaiting": "Hej, jag väntar på dig i chatten.",
+  "email-mailbox-message-invitation": "Gå till inbjudan",
+  "email-mailbox-message-view-message": "Visa meddelande i appen",
+  "email-mailbox-message-hello": "Hej",
+  "email-mailbox-message-got-new": "Du har fått en ny",
+  "email-mailbox-message-chat-invitation": "inbjudan till chatt",
+  "email-mailbox-message-message": "meddelande",
+  "assets": "tillgångar",
+  "User_offline_busy_1": "Hej jag vill prata om",
+  "User_offline_busy_2": ", när kan vi träffas?"
+}

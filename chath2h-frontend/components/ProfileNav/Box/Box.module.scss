@@ -1,0 +1,14 @@
+@import 'styles/vars.scss';
+
+.container {
+  padding: 21px 32px;
+  background: $c-silver;
+  border-radius: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.inActive {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

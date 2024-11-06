@@ -1,0 +1,51 @@
+@import '/styles/vars.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .coachesBackground {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .coaches {
+    z-index: 1;
+    padding: 65px 36px 118px;
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-weight: 400;
+      color: $c-black;
+      font-size: 32px;
+      line-height: 108%;
+      margin-bottom: 61px;
+      text-align: center;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(0, min(100%/1, max($default-grid-block, (100% - 5 * $default-grid-gap)/5))));
+      gap: $default-grid-gap;
+      justify-content: center;
+      width: 100%;
+
+      &_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

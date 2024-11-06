@@ -1,0 +1,78 @@
+@import 'styles/vars.scss';
+
+.notActive {
+  opacity: 50%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.content {
+  position: relative;
+  padding: 40px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+
+  &.price_info {
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    flex-direction: row;
+  }
+
+  .image {
+    position: relative;
+    height: 160px;
+    width: 160px;
+    min-width: 160px;
+
+    > img {
+      border-width: 0 0 2px 2px;
+      border-style: solid;
+      border-radius: 8px;
+    }
+
+    .imageOffer {
+      border-color: $c-limeGreen;
+    }
+
+    .imageNeed {
+      border-color: $c-red;
+    }
+  }
+
+  .text {
+    .title {
+      margin-bottom: 16px;
+
+      .titleCategory {
+        font-weight: 500;
+        font-size: 16px;
+      }
+    }
+
+    .description {
+      display: block;
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 21px;
+      word-break: break-word;
+    }
+
+    .hashtags {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+}
+
+.colorGreen {
+  color: $c-limeGreen;
+}
+
+.colorRed {
+  color: $c-red;
+}

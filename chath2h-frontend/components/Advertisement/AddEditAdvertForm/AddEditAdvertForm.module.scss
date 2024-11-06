@@ -1,0 +1,68 @@
+@import 'styles/vars.scss';
+
+.container {
+  padding-top: 47px;
+  width: 90%;
+
+  @media (min-width: 820px) {
+    width: 735px;
+  }
+
+  .form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 48px;
+
+    @media (min-width: 820px) {
+      flex-direction: row;
+    }
+
+    .secondColumnWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .secondColumn {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 820px) {
+          width: 506px;
+        }
+
+        label:not(:first-child) {
+          margin-top: 4px;
+        }
+
+        label {
+          color: $c-black;
+          margin-bottom: 12px;
+          line-height: 100%;
+          font-size: 12px;
+          font-weight: 400;
+        }
+
+        .fieldWrapper {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 25px;
+    margin-top: 40px;
+
+    .button {
+      padding: 10px 30px;
+    }
+  }
+}

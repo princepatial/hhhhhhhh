@@ -1,0 +1,96 @@
+@import 'styles/vars.scss';
+
+.cursor {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  .imageWrapper {
+    position: relative;
+    height: 56px;
+    width: 56px;
+    border-radius: 100%;
+    margin-right: 16px;
+
+    .image {
+      border-radius: 100%;
+    }
+  }
+
+  .smallDescription {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    gap: 5px;
+
+    .nameCategories {
+      .nameStatus {
+        display: flex;
+        gap: 10px;
+      }
+
+      .name {
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 10px;
+      }
+
+      .coach {
+        font-size: 10px;
+        background: $c-limeGreen;
+        color: $c-white;
+        padding: 0 10px;
+        border-radius: 4px;
+        max-height: 16px;
+        align-self: center;
+      }
+
+      .categories {
+        margin-top: 4px;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        word-break: break-word;
+
+        .item {
+          color: $c-limeGreen;
+
+          &::after {
+            content: '/';
+            margin: 0 3px;
+            font-size: 12px;
+            font-weight: 400;
+            color: $c-darkGrey;
+          }
+
+          &:last-child::after {
+            content: '';
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .onlineFavourite {
+      height: 100%;
+      margin-top: 4px;
+      z-index: 1;
+      .online {
+        color: $c-green;
+        display: block;
+        margin-bottom: 6px;
+        &::before {
+          content: '';
+          display: inline-block;
+          height: 8px;
+          margin-right: 6px;
+          width: 8px;
+          border-radius: 100%;
+          background: $c-green;
+        }
+      }
+    }
+  }
+}

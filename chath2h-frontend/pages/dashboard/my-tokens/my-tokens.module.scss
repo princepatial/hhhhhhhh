@@ -1,0 +1,211 @@
+@import 'styles/vars.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 12px 12px;
+
+    @media screen and (min-width: $breakpoint-xl) {
+      flex-direction: row;
+      margin-left: 50px;
+    }
+  }
+
+  .profile {
+    margin: 40px 20px 0 0;
+
+    @media screen and (min-width: $breakpoint-xl) {
+      max-width: 417px;
+      margin: 40px 30px 0 0;
+      position: sticky;
+      top: 40px;
+
+      @media screen and (min-width: $breakpoint-xxl) {
+        margin: 40px 59px 0 0;
+      }
+    }
+  }
+
+  .mainContent {
+    min-height: calc(100vh - 64px - 12px);
+    background: $c-silver;
+    flex: 1;
+    padding: 0 8.5% 20px 9%;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      padding: 0 4.5% 20px 6%;
+
+      @media screen and (min-width: $breakpoint-4xl) {
+        padding: 0 8.5% 20px 9%;
+      }
+    }
+
+    .topData {
+      margin-top: 64px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .tokensTitle {
+        .title {
+          display: block;
+          font-weight: 500;
+          font-size: 24px;
+          margin-bottom: 16px;
+        }
+
+        .tokens {
+          display: flex;
+          background-color: #e1f5f3;
+          border-radius: 24px;
+          color: $c-green;
+          font-size: 18px;
+          font-weight: 400;
+          height: 46px;
+          min-width: 108px;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .button {
+        font-weight: 500;
+        margin-top: 10px;
+        color: $c-white;
+        min-height: 46px;
+      }
+    }
+
+    .tokensListTitle {
+      padding: 35px 0;
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+
+      @media screen and (min-width: $breakpoint-lg) {
+        padding: 61px 0 37px 0;
+      }
+
+      .title {
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      .filter {
+        display: flex;
+        align-items: center;
+        gap: 3%;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          gap: 16px;
+        }
+
+        .type {
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .item {
+        background: $c-white;
+        padding: 24px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+
+        .textWrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+
+          .title {
+            display: block;
+            font-weight: 500;
+          }
+
+          .text {
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+          }
+        }
+
+        .dateWithBalance {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 18px;
+
+          .date {
+            display: block;
+            font-size: 12px;
+            font-weight: 300;
+            color: $c-grey;
+          }
+
+          .balance {
+            display: block;
+            font-size: 22px;
+            font-weight: 600;
+            white-space: nowrap;
+          }
+
+          .new_user,
+          .admin_granted {
+            color: $c-green;
+          }
+
+          .earn_chat {
+            color: $c-limeGreen;
+          }
+
+          .spent_chat {
+            color: $c-red;
+          }
+          .outdated_free {
+            color: $c-lightGrey;
+          }
+        }
+      }
+    }
+  }
+
+  .advertisement {
+    padding: 40px 0 0 42px;
+    width: 100%;
+    position: relative;
+
+    @media screen and (min-width: $breakpoint-xl) {
+      width: 20%;
+      position: sticky;
+      height: 100%;
+    }
+
+    .nku {
+      display: none;
+
+      @media screen and (min-width: $breakpoint-xl) {
+        display: block;
+      }
+    }
+  }
+  .flexEnd {
+    align-self: flex-end;
+    bottom: 0;
+  }
+  .flexStart {
+    align-self: flex-start;
+    top: 0;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "увійти в додаток",
+  "email-new-mailbox-message": "Нове повідомлення у вашій поштовій скриньці",
+  "email-confirmation": "Підтвердження по електронній пошті",
+  "email-confirmation-link": "Будь ласка, натисніть нижче, щоб підтвердити свою електронну пошту",
+  "email-ignore-info": "Якщо ви не запитували цього листа, можете сміливо його ігнорувати.",
+  "email-confirm": "Підтвердити",
+  "email-mailbox-message-awaiting": "Привіт, чекаю на тебе в чаті.",
+  "email-mailbox-message-invitation": "Перейти до запрошення",
+  "email-mailbox-message-view-message": "Переглянути повідомлення в додатку",
+  "email-mailbox-message-hello": "Привіт.",
+  "email-mailbox-message-got-new": "У тебе новий",
+  "email-mailbox-message-chat-invitation": "запрошення в чат",
+  "email-mailbox-message-message": "повідомлення",
+  "assets": "активи",
+  "User_offline_busy_1": "Привіт, я хочу поговорити про",
+  "User_offline_busy_2": "коли ми зможемо зустрітися?"
+}

@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "kirjaudu sovellukseen",
+  "email-new-mailbox-message": "Uusi viesti postilaatikossasi",
+  "email-confirmation": "Sähköpostivahvistus",
+  "email-confirmation-link": "Vahvista sähköpostiosoitteesi klikkaamalla alla olevaa linkkiä",
+  "email-ignore-info": "Jos et ole pyytänyt tätä sähköpostia, voit jättää sen huoletta huomiotta.",
+  "email-confirm": "Vahvista",
+  "email-mailbox-message-awaiting": "Hei, odotan sinua chatissa.",
+  "email-mailbox-message-invitation": "Siirry kutsuun",
+  "email-mailbox-message-view-message": "Näytä viesti sovelluksessa",
+  "email-mailbox-message-hello": "Hei",
+  "email-mailbox-message-got-new": "Sinulla on uusi",
+  "email-mailbox-message-chat-invitation": "chat-kutsu",
+  "email-mailbox-message-message": "viesti",
+  "assets": "varat",
+  "User_offline_busy_1": "Hei, haluan puhua",
+  "User_offline_busy_2": "milloin voimme tavata?"
+}

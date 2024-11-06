@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "Logg inn på appen",
+  "email-new-mailbox-message": "Ny melding i postkassen din",
+  "email-confirmation": "E-postbekreftelse",
+  "email-confirmation-link": "Klikk nedenfor for å bekrefte e-posten din",
+  "email-ignore-info": "Hvis du ikke har bedt om denne e-posten, kan du trygt ignorere den.",
+  "email-confirm": "Bekreft",
+  "email-mailbox-message-awaiting": "Hei, jeg venter på deg i chatten.",
+  "email-mailbox-message-invitation": "Gå til invitasjonen",
+  "email-mailbox-message-view-message": "Vis melding i appen",
+  "email-mailbox-message-hello": "Hei",
+  "email-mailbox-message-got-new": "Du har fått en ny",
+  "email-mailbox-message-chat-invitation": "Chat-invitasjon",
+  "email-mailbox-message-message": "melding",
+  "assets": "eiendeler",
+  "User_offline_busy_1": "Hei, jeg vil snakke om",
+  "User_offline_busy_2": "Når kan vi møtes?"
+}

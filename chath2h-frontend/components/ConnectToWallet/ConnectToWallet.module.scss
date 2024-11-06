@@ -1,0 +1,28 @@
+@import 'styles/vars.scss';
+
+.walletButton {
+  border-radius: 24px;
+  padding: 4px 15px;
+  background-color: $c-green;
+  min-width: 85px;
+  color: $c-white;
+  font-weight: 500;
+  min-height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-family: 'Poppins';
+  cursor: pointer;
+}
+
+.mobileWallet {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: unset;
+  font-size: 16px;
+  font-weight: 200 !important;
+  padding: 15px 25px;
+  font-family: 'Poppins', sans-serif;
+}

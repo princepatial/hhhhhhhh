@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .emptyImage {
+    margin-top: 150px;
+    position: relative;
+    width: 340px;
+    height: 217.17px;
+  }
+
+  .text {
+    margin-top: 48px;
+    color: #2c2222;
+    margin-bottom: 24px;
+  }
+}

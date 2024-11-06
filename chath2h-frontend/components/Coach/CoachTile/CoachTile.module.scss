@@ -1,0 +1,41 @@
+@import 'styles/vars.scss';
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 56px;
+  padding: 10px;
+  gap: 8px;
+  border-left: 2px solid $c-limeGreen;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid $c-lightGrey;
+  background: $c-white;
+  cursor: pointer;
+  text-wrap: nowrap;
+
+  .image {
+    position: relative;
+    height: 36px;
+    width: 36px;
+
+    .imageStyle {
+      border-radius: 100%;
+    }
+  }
+
+  .text {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-size: 12px;
+    }
+
+    .category {
+      font-size: 10px;
+      font-weight: 400;
+      color: $c-limeGreen;
+    }
+  }
+}

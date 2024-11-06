@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "アプリにログイン",
+  "email-new-mailbox-message": "メールボックスの新着メッセージ",
+  "email-confirmation": "電子メールによる確認",
+  "email-confirmation-link": "下記をクリックしてEメールをご確認ください。",
+  "email-ignore-info": "この電子メールを要求していない場合は、無視して差し支えない。",
+  "email-confirm": "確認",
+  "email-mailbox-message-awaiting": "チャットで待ってるよ。",
+  "email-mailbox-message-invitation": "招待状へ",
+  "email-mailbox-message-view-message": "アプリでメッセージを見る",
+  "email-mailbox-message-hello": "こんにちは",
+  "email-mailbox-message-got-new": "新しい",
+  "email-mailbox-message-chat-invitation": "チャット招待",
+  "email-mailbox-message-message": "メッセージ",
+  "assets": "資産",
+  "User_offline_busy_1": "こんにちは。",
+  "User_offline_busy_2": "いつ会える？"
+}

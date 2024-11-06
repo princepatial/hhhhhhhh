@@ -1,0 +1,83 @@
+@import 'styles/vars.scss';
+
+.container {
+  .topText {
+    border-bottom: 1px solid $c-lightGrey;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 4px;
+
+    .title {
+      font-weight: 500;
+    }
+
+    .linkText {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  .itemsRow {
+    overflow-y: auto;
+    margin-top: 24px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, 180px));
+      grid-template-rows: repeat(2, auto);
+      column-gap: 16px;
+      justify-content: space-between;
+    }
+
+    .imageBox {
+      width: 100%;
+
+      .image {
+        position: relative;
+        height: 88px;
+        border-radius: 8px;
+        overflow: hidden;
+        object-fit: cover;
+        border-width: 0 0 2px 2px;
+        border-style: solid;
+        border-color: transparent;
+
+        .imageGreen {
+          border-color: $c-limeGreen;
+        }
+
+        .imageRed {
+          border-color: $c-red;
+        }
+      }
+
+      .title {
+        display: block;
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        word-break: break-word;
+      }
+    }
+
+    .category {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      font-weight: 400;
+      word-break: break-word;
+    }
+  }
+}
+
+.colorRed {
+  color: $c-red;
+}
+
+.colorGreen {
+  color: $c-limeGreen;
+}

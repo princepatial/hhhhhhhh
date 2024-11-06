@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "uygulamaya giriş yapın",
+  "email-new-mailbox-message": "Posta kutunuza yeni mesaj geldi",
+  "email-confirmation": "E-posta onayı",
+  "email-confirmation-link": "E-postanızı onaylamak için lütfen aşağıya tıklayın",
+  "email-ignore-info": "Bu e-postayı talep etmediyseniz, güvenle görmezden gelebilirsiniz.",
+  "email-confirm": "Onaylayın",
+  "email-mailbox-message-awaiting": "Hey, seni sohbette bekliyorum.",
+  "email-mailbox-message-invitation": "Davetiyeye git",
+  "email-mailbox-message-view-message": "Uygulamada mesaj görüntüleme",
+  "email-mailbox-message-hello": "Merhaba",
+  "email-mailbox-message-got-new": "Yeni bir",
+  "email-mailbox-message-chat-invitation": "sohbet daveti",
+  "email-mailbox-message-message": "mesaj",
+  "assets": "varlıklar",
+  "User_offline_busy_1": "Merhaba, konuşmak istediğim konu",
+  "User_offline_busy_2": "Ne zaman buluşabiliriz?"
+}

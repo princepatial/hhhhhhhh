@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "login to the app",
+  "email-confirmation": "E-mail confirmation",
+  "email-confirmation-link": "Please click below to confirm your email",
+  "email-ignore-info": "If you did not request this email you can safely ignore it.",
+  "email-confirm": "Confirm",
+  "email-mailbox-message-awaiting": "Hey, I'm waiting for you in the chat.",
+  "email-mailbox-message-invitation": "Go to the invitation",
+  "email-mailbox-message-view-message": "View message in the app",
+  "email-mailbox-message-hello": "Hi",
+  "email-mailbox-message-got-new": "You've got a new",
+  "email-mailbox-message-chat-invitation": "chat invitation",
+  "email-mailbox-message-message": "message",
+  "email-new-mailbox-message": "New message in your mailbox",
+  "assets": "assets",
+  "User_offline_busy_1": "Hi i want to talk about ",
+  "User_offline_busy_2": ", when we can meet?"
+}

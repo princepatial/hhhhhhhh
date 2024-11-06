@@ -1,0 +1,25 @@
+@import 'styles/vars.scss';
+
+.container {
+  font-size: 14px;
+  font-weight: 500;
+
+  .title {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .coach {
+    padding: 12px 0;
+    border: 0 solid $c-lightGrey;
+    border-top-width: 1px;
+    &:last-child {
+      border-width: 1px 0;
+    }
+  }
+  .emptyFollow {
+    display: flex;
+    justify-content: center;
+    color: $c-green;
+  }
+}

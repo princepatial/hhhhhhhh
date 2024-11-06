@@ -1,0 +1,82 @@
+@import 'styles/vars.scss';
+
+.container {
+  .list {
+    list-style-type: none;
+    cursor: pointer;
+    .NeedItem {
+      .typeTextItem {
+        color: $c-red;
+      }
+    }
+
+    img {
+      min-width: 52px;
+      min-height: 52px;
+    }
+
+    .NeedItem {
+      .Image {
+        border-bottom: 2px solid $c-red;
+        border-left: 2px solid $c-red;
+        border-radius: 8px;
+      }
+    }
+
+    .CoachItem {
+      .Image {
+        border-radius: 50%;
+      }
+      .typeTextItem {
+        color: $c-limeGreen;
+        font-size: 12px;
+      }
+    }
+
+    .OfferItem {
+      .Image {
+        border-bottom: 2px solid $c-limeGreen;
+        border-left: 2px solid $c-limeGreen;
+        border-radius: 8px;
+      }
+      .typeTextItem {
+        color: $c-limeGreen;
+      }
+    }
+
+    &Item {
+      position: relative;
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        border-top: 1px solid $c-lightGrey;
+        width: 100%;
+        top: 0px;
+      }
+
+      &:last-child::after {
+        content: '';
+        position: absolute;
+        border-bottom: 1px solid $c-lightGrey;
+        width: 100%;
+        bottom: 0px;
+      }
+
+      &Content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 14px;
+        font-weight: 500;
+
+        .title {
+          word-break: break-word;
+        }
+      }
+    }
+  }
+}

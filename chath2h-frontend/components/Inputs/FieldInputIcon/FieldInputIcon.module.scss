@@ -1,0 +1,18 @@
+@import 'styles/vars.scss';
+
+.container {
+  .inputWrapper {
+    display: flex;
+    border-bottom: 1px solid $c-grey;
+  }
+
+  .input {
+    background: none;
+    border: none;
+  }
+
+  .error {
+    margin-top: 5px;
+    color: red;
+  }
+}

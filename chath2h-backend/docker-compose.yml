@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  database:
+    image: mongo:6.0.2
+    ports:
+      - 27017:27017
+    volumes:
+      - database:/data/db
+  # mailer:
+  #   image: netisoft/mailer:latest
+  #   depends_on:
+  #     - database
+  #   ports:
+  #     - 3002:80
+  #   environment:
+  #     DB_SERVER: ${MONGO_SERVER}
+  #     DB_PORT: ${DB_PORT}
+  #     DB_NAME: ${DB_NAME}
+  #     TOKEN: ${TOKEN}
+  #     MAIL_POLLED: ${MAIL_POLLED}
+  #     MAIL_HOST: ${MAIL_HOST}
+  #     MAIL_PORT: ${MAIL_PORT}
+  #     MAIL_SECURED: ${MAIL_SECURED}
+  #     MAIL_USERNAME: ${MAIL_USERNAME}
+  #     MAIL_PASSWORD: ${MAIL_PASSWORD}
+volumes:
+  database:

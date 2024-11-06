@@ -1,0 +1,162 @@
+@import 'styles/vars.scss';
+
+.container {
+  .exportButtons {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .text {
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15%;
+    }
+  }
+
+  .users {
+    width: calc(100vw - 330px);
+    overflow: auto;
+  }
+
+  .sendButton {
+    border: none;
+  }
+
+  .actionButton {
+    width: 100px;
+    height: 25px;
+    background-color: $c-red;
+    border-radius: 8px;
+    color: $c-white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .disableButton {
+    background-color: $c-red;
+
+    &:hover {
+      background-color: $c-white;
+      color: $c-black;
+    }
+  }
+
+  .disableButton {
+    background-color: $c-red;
+
+    &:hover {
+      background-color: $c-white;
+      color: $c-black;
+    }
+  }
+
+  .enableButton {
+    background-color: $c-limeGreen;
+
+    &:hover {
+      background-color: $c-white;
+      color: $c-black;
+    }
+  }
+
+  table {
+    width: 100%;
+    text-align: left;
+
+    thead {
+      vertical-align: text-top;
+    }
+
+    th {
+      color: $c-green;
+      font-weight: 700;
+      letter-spacing: 2px;
+
+      .radioButtons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 12px;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 5px;
+        min-width: 150px;
+
+        & > div {
+          display: flex;
+          align-items: center;
+
+          & > input,
+          > label {
+            cursor: pointer;
+          }
+
+          & > label {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+
+    .colTitle {
+      cursor: pointer;
+    }
+
+    tbody {
+      tr {
+        padding: 10px;
+
+        &:hover {
+          background-color: $c-green;
+          cursor: pointer;
+        }
+      }
+    }
+
+    td {
+      font-size: 12px;
+      padding: 8px;
+
+      .grantCell {
+        justify-content: center;
+        display: flex;
+        gap: 5px;
+
+        > input {
+          padding-left: 2px;
+          max-width: 125px;
+        }
+      }
+    }
+  }
+
+  .paginationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .pageNumber {
+      display: flex;
+      align-items: center;
+
+      strong {
+        margin-left: 10px;
+      }
+
+      input {
+        margin-left: 10px;
+        width: 100px;
+      }
+    }
+  }
+}

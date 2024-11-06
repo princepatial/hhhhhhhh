@@ -1,0 +1,109 @@
+@import 'styles/vars.scss';
+
+.container {
+  margin-top: 36px;
+  font-weight: 300;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  min-height: calc(100vh - 36px - 64px);
+
+  @media screen and (min-width: $breakpoint-lg) {
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: $breakpoint-xxl) {
+    padding: 0 10% 0 4%;
+  }
+
+  .profileNav {
+    flex-direction: row;
+    top: 64px;
+    left: 0;
+    display: none;
+
+    @media (min-width: $breakpoint-lg) {
+      display: flex;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    padding: 0 3%;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: $breakpoint-lg) {
+      padding-left: 3%;
+
+      @media screen and (min-width: $breakpoint-xxl) {
+        padding-left: 10%;
+      }
+    }
+    .topMenu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 31px;
+
+      .other {
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      .red {
+        color: $c-red;
+      }
+
+      .green {
+        color: $c-limeGreen;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 24px;
+
+        .button {
+          cursor: pointer;
+          color: black;
+          background: none;
+          border: none;
+          font-weight: 600;
+          font-size: 24px;
+        }
+
+        .needButton {
+          color: $c-red;
+          border-bottom: 2px solid $c-red;
+        }
+
+        .offerButton {
+          color: $c-limeGreen;
+          border-bottom: 2px solid $c-limeGreen;
+        }
+      }
+    }
+
+    .topTextButton {
+      color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      .topText {
+        font-size: 16px;
+        display: block;
+      }
+    }
+
+    .workList {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}

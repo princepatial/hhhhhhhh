@@ -1,0 +1,92 @@
+@import 'styles/vars.scss';
+
+.container {
+  cursor: pointer;
+  padding: 22px;
+  background: $c-white;
+  border-bottom: 1px solid $c-lightGrey;
+  gap: 22px;
+  position: relative;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    display: flex;
+  }
+
+  .imageWrapper {
+    position: relative;
+
+    .tileImage {
+      border-bottom: 2px solid;
+      border-left: 2px solid;
+      border-radius: 8px;
+    }
+
+    .borderGreen {
+      border-color: $c-limeGreen;
+    }
+
+    .borderRed {
+      border-color: $c-red;
+    }
+  }
+
+  .data {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    width: 100%;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 500;
+
+    .category {
+      &::after {
+        content: '/';
+        margin: 0 3px;
+      }
+    }
+
+    .topText {
+      display: flex;
+      justify-content: space-between;
+
+      .name {
+        display: flex;
+        align-items: center;
+
+        &>span:first-child {
+          display: inline-block;
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .problemTitle {
+      display: inline-block;
+      word-break: break-word;
+    }
+
+    .description {
+      display: inline;
+      font-weight: 300;
+      word-break: break-word;
+      inline-size: 100%;
+
+      .button {
+        font-size: 12px;
+        margin-left: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .green {
+    color: $c-limeGreen;
+  }
+
+  .red {
+    color: $c-red;
+  }
+}

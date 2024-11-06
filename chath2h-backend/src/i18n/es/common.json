@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "iniciar sesión en la aplicación",
+  "email-new-mailbox-message": "Nuevo mensaje en su buzón",
+  "email-confirmation": "Confirmación por correo electrónico",
+  "email-confirmation-link": "Haga clic a continuación para confirmar su correo electrónico",
+  "email-ignore-info": "Si no ha solicitado este correo electrónico, puede ignorarlo.",
+  "email-confirm": "Confirme",
+  "email-mailbox-message-awaiting": "Hola, te espero en el chat.",
+  "email-mailbox-message-invitation": "Ir a la invitación",
+  "email-mailbox-message-view-message": "Ver mensaje en la aplicación",
+  "email-mailbox-message-hello": "Hola",
+  "email-mailbox-message-got-new": "Tienes un nuevo",
+  "email-mailbox-message-chat-invitation": "invitación al chat",
+  "email-mailbox-message-message": "mensaje",
+  "assets": "activos",
+  "User_offline_busy_1": "Hola quiero hablar sobre",
+  "User_offline_busy_2": "¿Cuándo podemos vernos?"
+}

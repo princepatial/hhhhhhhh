@@ -1,0 +1,205 @@
+@import 'styles/vars.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .userDetails {
+    display: flex;
+    margin-bottom: 2rem;
+
+    .details {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cursorPointer {
+      cursor: pointer;
+    }
+
+    .name {
+      color: $c-black;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .time {
+      color: $c-darkGrey;
+      font-size: 0.875rem;
+
+      &::before {
+        content: '';
+        width: 0.25rem;
+        height: 0.25rem;
+        background-color: $c-darkGrey;
+        border-radius: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0.3rem 0.2rem 0.3rem;
+      }
+    }
+
+    .avatarWrapper {
+      position: relative;
+      width: 3.5rem;
+      height: 3.5rem;
+      margin-right: 1rem;
+
+      .avatar {
+        border-radius: 100%;
+      }
+    }
+
+    .online {
+      color: $c-green;
+      font-size: 0.75rem;
+
+      &::before {
+        content: '';
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: $c-green;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 0.3rem;
+      }
+    }
+
+    .offline {
+      color: $c-darkGrey;
+      font-size: 0.75rem;
+
+      &::before {
+        content: '';
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: $c-darkGrey;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 0.3rem;
+      }
+    }
+  }
+
+  .offerDetails {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    .shareImg {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+      position: relative;
+
+      .tooltip {
+        visibility: visible;
+        color: $c-green;
+        opacity: 100;
+        background: none;
+        font-size: 12px;
+        font-weight: 500;
+        top: 20px;
+        right: -25px;
+        left: auto;
+
+        & > div {
+          display: none;
+        }
+      }
+    }
+
+    .imageWrapper {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      min-height: 100px;
+      min-width: 100px;
+
+      @media (min-width: $breakpoint-xl) {
+        width: 160px;
+        height: 160px;
+        min-height: 160px;
+        min-width: 160px;
+      }
+
+      .image {
+        border: solid black;
+        border-width: 0 0 2px 2px;
+        border-radius: 8px;
+      }
+
+      .needImage {
+        border-color: $c-red;
+      }
+
+      .helpImage {
+        border-color: $c-limeGreen;
+      }
+    }
+
+    .imageWrapperHeight {
+      height: 100px;
+      width: 100px;
+      min-height: 100px;
+      min-width: 100px;
+    }
+
+    .basicInfo {
+      margin: auto 0 auto 1.5rem;
+
+      .categoryName {
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .categoryNeed {
+        color: $c-red;
+      }
+
+      .categoryHelp {
+        color: $c-limeGreen;
+      }
+
+      .title {
+        color: black;
+        font-weight: 500;
+        margin-top: 3px;
+        word-break: break-word;
+      }
+    }
+  }
+
+  .moreInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .description {
+      color: $c-black;
+      font-size: 0.875rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      word-break: break-word;
+    }
+
+    .needTag {
+      color: $c-red;
+      font-size: 0.75rem;
+      margin-right: 0.2rem;
+    }
+
+    .helpTag {
+      color: $c-limeGreen;
+      font-size: 0.75rem;
+      margin-right: 0.2rem;
+    }
+  }
+}

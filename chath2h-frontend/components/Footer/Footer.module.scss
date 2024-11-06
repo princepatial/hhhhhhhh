@@ -1,0 +1,37 @@
+@import 'styles/vars.scss';
+
+.footer {
+  padding: 2em 1em;
+  color: $c-darkGrey;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    max-width: $breakpoint-xxl;
+    margin: auto;
+
+    @media screen and (min-width: $breakpoint-md) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      @media screen and (min-width: $breakpoint-md) {
+        gap: 30px;
+        flex-wrap: nowrap;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          gap: 50px;
+        }
+      }
+    }
+  }
+}

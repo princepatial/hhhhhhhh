@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "Melden Sie sich bei der App an",
+  "email-confirmation": "E-mail Bestätigung",
+  "email-confirmation-link": "Bitte klicken Sie unten, um Ihre E-Mail zu bestätigen",
+  "email-ignore-info": "Wenn Sie diese E-Mail nicht angefordert haben, können Sie sie getrost ignorieren.",
+  "email-confirm": "Bestätigen Sie",
+  "email-mailbox-message-awaiting": "Hey, ich warte im Chat auf dich.",
+  "email-mailbox-message-invitation": "Weiter zur Einladung",
+  "email-mailbox-message-view-message": "Nachricht in der App anzeigen",
+  "email-mailbox-message-hello": "Hallo",
+  "email-mailbox-message-chat-invitation": "Chat-Einladung",
+  "email-mailbox-message-message": "Nachricht",
+  "email-mailbox-message-got-new": "Sie haben eine neue",
+  "email-new-mailbox-message": "Neue Nachricht in Ihrer Mailbox",
+  "assets": "Vermögenswerte",
+  "User_offline_busy_1": "Hallo, ich möchte über Folgendes sprechen",
+  "User_offline_busy_2": "wann können wir uns treffen?"
+}

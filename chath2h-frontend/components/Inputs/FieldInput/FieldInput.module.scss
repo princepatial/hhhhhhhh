@@ -1,0 +1,33 @@
+@import 'styles/vars.scss';
+
+.container {
+  height: 100%;
+
+  & > input {
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+    font-family: inherit;
+    padding: 8px 8px 8px 14px;
+    border: 1px solid $c-lightGrey;
+    border-radius: 4px;
+    background: $c-white;
+    font-size: 14px;
+    color: $c-black;
+    font-weight: 300;
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: 300;
+      color: $c-darkGrey;
+    }
+  }
+
+  .error {
+    font-size: 10px;
+    color: red;
+    margin-top: 3px;
+  }
+}

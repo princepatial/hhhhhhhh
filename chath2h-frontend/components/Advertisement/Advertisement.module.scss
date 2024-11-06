@@ -1,0 +1,47 @@
+@import 'styles/vars.scss';
+
+.container {
+  position: relative;
+  height: 100%;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    scale: 1.01;
+  }
+
+
+  .advert {
+    background-color: #f9f9f9;
+    color: #afafaf;
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .adminAdvert {
+    opacity: 0.5;
+
+    &:hover {
+      cursor: grab;
+    }
+  }
+
+  .action {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: fit-content;
+    height: max-content;
+
+    .iconButton {
+      width: 35px;
+      height: 35px;
+      padding: 5px;
+      fill: white;
+    }
+  }
+}

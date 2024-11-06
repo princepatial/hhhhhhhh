@@ -1,0 +1,92 @@
+@import 'styles/vars.scss';
+
+.button {
+  display: inline-flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 108%;
+  transition: all 0.1s ease-in-out;
+  border: 1px solid;
+  background-color: $c-white;
+  color: $c-white;
+
+  @media screen and (min-width: $breakpoint-md) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  &.green {
+    background-color: $c-green;
+  }
+
+  &.whiteGreen {
+    color: $c-green;
+  }
+
+  &.green,
+  &.whiteGreen {
+    border-color: $c-green;
+
+    &:hover {
+      box-shadow: 0 0 10px -2px $c-green;
+    }
+  }
+
+  &.grey {
+    color: $c-grey;
+    border-color: $c-grey;
+
+    &:hover {
+      box-shadow: 0 0 10px -2px $c-grey;
+    }
+  }
+
+  &.black {
+    color: $c-black;
+    border-color: $c-black;
+  }
+
+  &.red {
+    background-color: $c-red;
+  }
+
+  &.whiteRed {
+    color: $c-red;
+  }
+
+  &.red,
+  &.whiteRed {
+    border-color: $c-red;
+
+    &:hover {
+      box-shadow: 0 0 10px -2px $c-red;
+    }
+  }
+
+  &.limeGreen {
+    border-color: $c-limeGreen;
+    background-color: $c-limeGreen;
+
+    &:hover {
+      box-shadow: 0 0 10px -2px $c-limeGreen;
+    }
+  }
+
+  &:disabled {
+    background: $c-white;
+    border-color: $c-disabled;
+    color: $c-disabled;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,16 @@
+.container {
+  .error {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 10px;
+    color: red;
+  }
+  label {
+    font-family: inherit;
+    cursor: pointer;
+  }
+  input {
+    display: none;
+  }
+}

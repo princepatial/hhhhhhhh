@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "Faça login no aplicativo",
+  "email-new-mailbox-message": "Nova mensagem em sua caixa de correio",
+  "email-confirmation": "Confirmação por e-mail",
+  "email-confirmation-link": "Clique abaixo para confirmar seu e-mail",
+  "email-ignore-info": "Se você não solicitou esse e-mail, pode ignorá-lo com segurança.",
+  "email-confirm": "Confirmar",
+  "email-mailbox-message-awaiting": "Ei, estou esperando por você no bate-papo.",
+  "email-mailbox-message-invitation": "Ir para o convite",
+  "email-mailbox-message-view-message": "Exibir mensagem no aplicativo",
+  "email-mailbox-message-hello": "Hi",
+  "email-mailbox-message-got-new": "Você tem um novo",
+  "email-mailbox-message-chat-invitation": "convite para bate-papo",
+  "email-mailbox-message-message": "mensagem",
+  "assets": "ativos",
+  "User_offline_busy_1": "Olá, gostaria de falar sobre",
+  "User_offline_busy_2": "Quando podemos nos encontrar?"
+}

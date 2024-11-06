@@ -1,0 +1,92 @@
+@import 'styles/vars.scss';
+
+.container {
+  margin: 64px auto 0 auto;
+  max-width: 1200px;
+  padding: 0 3%;
+  min-height: calc(100vh - 64px - 64px);
+
+  @media screen and (min-width: 584px) {
+    padding: 0 36px;
+  }
+
+  .coachProfileForm {
+    width: 100%;
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint-modal-bp) {
+      width: 735px;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: normal;
+      text-align: left;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 10px;
+
+      @media screen and (min-width: $breakpoint-sm) {
+        flex-direction: row;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+
+        @media screen and (min-width: $breakpoint-s) {
+          flex-direction: row;
+        }
+
+        .help {
+          display: flex;
+          align-items: center;
+          color: $c-grey;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .subtitle {
+      margin: 16px 0 64px;
+      color: #2c2222;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: normal;
+
+      .second {
+        margin-top: 24px;
+
+        .boldText {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .areas {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit,
+          minmax(0, min(98%/2, max($default-grid-block, (100% - 8 * $default-grid-gap)/4))));
+      row-gap: $default-grid-gap / 2;
+      column-gap: 2%;
+
+      @media screen and (min-width: 584px) {
+        column-gap: $default-grid-gap * 2;
+      }
+    }
+  }
+}

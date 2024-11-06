@@ -1,0 +1,14 @@
+.noData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+  height: 69vh;
+
+  .image {
+    position: relative;
+    height: 270px;
+    width: 292px;
+    margin-bottom: 35px;
+  }
+}

@@ -1,0 +1,41 @@
+@import 'styles/vars.scss';
+
+.sidebar {
+  background-color: #f0f8f7;
+  height: 100%;
+}
+
+.navItem {
+  min-height: 50px;
+  padding-left: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: $c-green;
+    color: $c-white;
+  }
+}
+
+.subItems {
+  padding-left: 30px;
+}
+
+.activeNavItem {
+  background-color: $c-green;
+  color: $c-white;
+}
+
+.navLabel {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.navItemHeaderButton {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}

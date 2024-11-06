@@ -1,0 +1,19 @@
+@import 'styles/vars.scss';
+
+.list {
+  margin: 0;
+  list-style-type: none;
+  list-style-position: inside;
+}
+.list > li {
+  text-indent: -5px;
+}
+.list > li:before {
+  content: '-';
+  margin-right: 5px;
+  text-indent: -5px;
+}
+
+.link {
+  color: $c-green;
+}

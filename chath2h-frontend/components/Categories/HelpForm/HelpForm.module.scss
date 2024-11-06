@@ -1,0 +1,122 @@
+@import 'styles/vars.scss';
+
+.container {
+  padding-top: 47px;
+  width: 90%;
+
+  @media (min-width: $breakpoint-modal-bp) {
+    width: 735px;
+  }
+
+  .form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 48px;
+
+    @media (min-width: $breakpoint-modal-bp) {
+      flex-direction: row;
+    }
+
+    .imageWrapper {
+      width: auto;
+
+      @media (min-width: $breakpoint-modal-bp) {
+        width: 180px;
+      }
+    }
+
+    .secondColumn {
+      display: flex;
+      flex-direction: column;
+
+      @media (min-width: $breakpoint-modal-bp) {
+        width: 506px;
+      }
+
+      label:not(:first-child) {
+        margin-top: 4px;
+      }
+
+      label {
+        color: $c-black;
+        margin-bottom: 12px;
+        line-height: 100%;
+        font-size: 12px;
+        font-weight: 400;
+
+        .subLabel {
+          color: $c-darkGrey;
+        }
+      }
+
+      .fieldWrapper {
+        margin-top: 4px;
+
+        .tag_input {
+          width: auto;
+          border: none;
+          outline: none;
+        }
+      }
+
+      .tag_wrapper {
+        .input {
+          &>span {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            align-items: center;
+
+            &>input {
+              width: auto;
+            }
+
+            .react-tagsinput-tag {
+              margin-bottom: 0 !important;
+            }
+          }
+        }
+      }
+
+      textarea {
+        height: 132px;
+      }
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+    flex-direction: column;
+
+    @media (min-width: 620px) {
+      flex-direction: row;
+      align-items: unset;
+    }
+
+    &>button {
+      width: 70%;
+
+      @media (min-width: 620px) {
+        width: unset;
+      }
+
+      @media (min-width: $breakpoint-modal-bp) {
+        max-width: 110px;
+      }
+    }
+
+    .button {
+      padding: 10px 5%;
+    }
+  }
+}

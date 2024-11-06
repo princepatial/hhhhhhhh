@@ -1,0 +1,205 @@
+@import 'styles/vars.scss';
+
+.profile {
+  display: none;
+
+  @media (min-width: $breakpoint-xl) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .person {
+    background: #f0f8f7;
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    border-radius: 16px;
+
+    .text {
+      flex-basis: 70%;
+
+      .title {
+        display: block;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 26px;
+        color: $c-green;
+      }
+    }
+
+    .image {
+      position: relative;
+      height: 71px;
+      width: 72px;
+
+      .styleImage {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .earnMoney {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+
+    .title {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      .text {
+        max-width: 205px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .imageAnim {
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation: shake 4s;
+        animation-iteration-count: 3;
+      }
+    }
+
+    .description {
+      font-size: 14px;
+    }
+
+    .link {
+      font-size: 14px;
+      font-weight: 500;
+      color: $c-green;
+    }
+  }
+
+  .mailBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .red {
+        color: $c-red;
+      }
+    }
+
+    .envelop {
+      position: relative;
+
+      .dot {
+        position: absolute;
+        right: -7px;
+        top: -5px;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: $c-red;
+      }
+    }
+  }
+
+  .wrapperBox {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    cursor: pointer;
+
+    @media (min-width: 1550px) {
+      flex-direction: row;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    .description {
+      font-size: 14px;
+      font-weight: 300;
+      margin-top: 8px;
+    }
+  }
+
+  .myTokenBox {
+    display: flex;
+    flex-direction: column;
+    background: $c-silver;
+    cursor: pointer;
+    width: 100%;
+
+    .title {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  .title {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 21px;
+    color: $c-green;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  84% {
+    transform: translateY(0) rotate(0deg);
+  }
+  86% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  88% {
+    transform: translateY(-5px) rotate(-15deg);
+  }
+  90% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  92% {
+    transform: translateY(-5px) rotate(15deg);
+  }
+  94% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  96% {
+    transform: translateY(-5px) rotate(-15deg);
+  }
+  98% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}

@@ -1,0 +1,199 @@
+.react-calendar {
+  display: block;
+  width: 257px;
+  height: auto;
+  background: #F3F3F3;
+  border-radius: 8px;
+  line-height: 1.125em;
+  padding: 10px;
+  
+  @media (min-width: 400px) {
+    width: 307px;
+    padding: 21px;
+  }
+}
+
+.react-calendar--doubleView {
+  width: 700px;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  gap: 2px;
+  
+  @media (min-width: 400px) {
+    gap: 6px;
+  }
+  
+}
+
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: 34px;
+  background: transparent;
+  margin-bottom: 1em;
+  flex-grow: unset !important;
+}
+
+.react-calendar__navigation__label {
+  flex-grow: unset !important;
+  width: 113px;
+  padding: 8px 12px;
+  background: #FFF;
+  color: #141414;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.react-calendar__navigation__prev-button, 
+.react-calendar__navigation__next-button {
+  display: flex;
+  background: none;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: white;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  color: #616161;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  flex: unset !important;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+  flex: unset !important;
+  height: 32px;
+  width: 32px;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+.react-calendar__month-view__days__day {
+  color: rgba(97, 97, 97, 1);
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: rgba(57, 171, 164, 1);
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+
+.react-calendar__tile {
+  width: 32px !important;
+  height: 32px !important;
+  text-align: center;
+  border-radius: 4px;
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  flex: unset !important;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+  color: rgba(179, 179, 179, 1);
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+/* .react-calendar__tile--now {
+  background: #ffff76;
+} */
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__tile--hasActive {
+  background: #76baff;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #a9d4ff;
+}
+
+.react-calendar__tile--active {
+  background: #39aba4;
+  border-radius: 4px;
+  color: white;
+  width: 32px;
+  height: 32px;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #39aba4;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6;
+}

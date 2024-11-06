@@ -1,0 +1,130 @@
+@import 'styles/vars.scss';
+
+.container {
+  color: black;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  min-height: calc(100vh - 64px);
+
+  @media (min-width: $breakpoint-md) {
+    overflow: unset;
+    height: 100%;
+  }
+
+  .advertisementWrapper {
+    position: fixed;
+    background: white;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    max-height: 30%;
+    z-index: 100;
+
+    @media (min-width: $breakpoint-xl) {
+      z-index: unset;
+      position: sticky;
+      display: block;
+      margin: 0 1.25%;
+      flex-basis: 21.25%;
+      height: 100%;
+    }
+  }
+
+  .index {
+    z-index: 100;
+  }
+
+  .needsContainer {
+    flex: 1;
+    padding: 0 3.39% 3.39%;
+    background: $c-silver;
+    width: 100%;
+  }
+
+  .needsContainerMobile {
+    height: calc(100vh - 64px);
+
+    @media screen and (min-width: $breakpoint-md) {
+      height: unset;
+    }
+  }
+
+  .filterMobileOpen {
+    height: 50vh;
+    z-index: 2;
+
+    @media screen and (min-width: $breakpoint-md) {
+      height: 100%;
+    }
+  }
+
+  .problemDetails {
+    flex-basis: 24.22%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: calc(100vh - 64px);
+    width: 100%;
+    background: $c-white;
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: left 0.3s;
+
+    @media screen and (min-width: $breakpoint-md) {
+      left: 0;
+      top: unset;
+      bottom: 0;
+      position: sticky;
+      height: 100%;
+    }
+
+    @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-xl) {
+      flex-basis: 30%;
+    }
+
+    .advertisement {
+      margin: 34px 8.6% 0;
+      display: none;
+
+      @media screen and (min-width: $breakpoint-md) {
+        display: block;
+      }
+    }
+
+    .details {
+      padding: 30px 4% 21px;
+
+      @media (min-width: $breakpoint-md) {
+        padding: 30px 10% 21px;
+      }
+    }
+  }
+
+  .mobileDetails {
+    left: 0;
+  }
+  .flexStartAdvert {
+    @media screen and (min-width: $breakpoint-xl) {
+      align-self: flex-start;
+      top: 15px;
+    }
+  }
+
+  .flexEndAdvert {
+    align-self: flex-end;
+  }
+
+  .flexStart {
+    @media screen and (min-width: $breakpoint-xl) {
+      align-self: flex-start;
+      top: 15px;
+    }
+  }
+
+  .flexEnd {
+    align-self: flex-end;
+  }
+}

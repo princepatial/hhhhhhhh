@@ -1,0 +1,63 @@
+@import 'styles/vars.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  .listOfTables {
+    border: 1px solid $c-darkGrey;
+    width: 90%;
+
+    @media screen and (min-width: $breakpoint-xl) {
+      width: 60%;
+
+      @media screen and (min-width: $breakpoint-xxl) {
+        width: 50%;
+      }
+    }
+
+    .table {
+      padding: 10px 40px;
+      width: 100%;
+      border: 1px solid $c-darkGrey;
+      border-width: 0 1px;
+      text-align: center;
+      background: $c-silver;
+
+      thead {
+        tr > th:first-child {
+          text-align: left;
+        }
+
+        tr > th {
+          font-size: 18px;
+          font-weight: 500;
+          color: $c-green;
+        }
+      }
+
+      .body {
+        width: 100%;
+
+        tr > td:first-child {
+          text-align: left;
+        }
+
+        tr > td {
+          border-bottom: 1px dotted black;
+          padding: 0 5%;
+          font-size: 14px;
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .buttonWrapper {
+    margin-top: 20px;
+  }
+}

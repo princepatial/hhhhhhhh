@@ -1,0 +1,94 @@
+@import 'styles/vars.scss';
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 2% 20px 2%;
+  word-break: break-word;
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 70px 2%;
+  }
+
+  .subTitle {
+    margin: 0 auto;
+    font-style: italic;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+
+  li {
+    text-align: justify;
+  }
+
+  h4 {
+    font-size: 22px;
+    margin: 50px 0 15px;
+    font-weight: 500;
+  }
+
+  .agbContent {
+    margin: 0 auto;
+
+    .sheetPaper {
+      margin: 50px 0;
+      padding: 5px 1.5%;
+      background: $c-lightGrey;
+      border: 1px solid $c-black;
+
+      .h4 {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.listNumeric {
+  ol {
+    counter-reset: item;
+  }
+
+  li {
+    display: block;
+  }
+
+  ol > li:before,
+  ol > ul > li:before {
+    font-weight: 500;
+    content: counters(item, '.') '. ';
+    counter-increment: item;
+  }
+}
+
+.listNumericCancel {
+  li {
+    display: list-item;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.link {
+  color: $c-green;
+
+  &:hover {
+    color: $c-limeGreen;
+  }
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}

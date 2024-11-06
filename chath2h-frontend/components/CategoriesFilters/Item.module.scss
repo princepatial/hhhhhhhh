@@ -1,0 +1,43 @@
+@import 'styles/vars.scss';
+
+.item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-bottom: 1px solid $c-lightGrey;
+  font-size: 16px;
+  align-items: center;
+  font-weight: 300;
+  cursor: pointer;
+
+  .textBold {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .image {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .imageRotate {
+    transform: rotate(180deg);
+  }
+}
+
+.title {
+  cursor: default;
+}
+
+.subItem {
+  padding-left: 50px;
+}
+
+.backgroundSilver {
+  background: $c-silver;
+}

@@ -1,0 +1,40 @@
+@import '/styles/vars.scss';
+
+.container {
+  width: 100%;
+
+  .betweenPhoto {
+    display: flex;
+    align-items: center;
+    color: rgba(57, 171, 164, 1);
+    width: 100%;
+    text-align: left;
+    padding-left: 38px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    font-weight: 300;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 20px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: 22px;
+    }
+  }
+
+  .photo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

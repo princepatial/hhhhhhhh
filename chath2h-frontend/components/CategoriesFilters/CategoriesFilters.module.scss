@@ -1,0 +1,204 @@
+@import 'styles/vars.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  width: 100%;
+  padding: 40px 0 16px 0;
+  gap: 30px;
+
+  @media (min-width: $breakpoint-xl) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .filtersMobile {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    @media (min-width: $breakpoint-xl) {
+      display: none;
+    }
+
+    .addOffer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-basis: 66.6%;
+
+      & > button {
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
+      }
+    }
+
+    .filterButton {
+      .image {
+        position: relative;
+        height: 20px;
+        width: 16px;
+      }
+    }
+
+    .filters {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: calc(100vh - 100px - 64px);
+      overflow: auto;
+      width: 100%;
+      background-color: $c-white;
+      z-index: 1;
+
+      .applyButton {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: $c-white;
+        height: 100px;
+        width: 100%;
+        box-shadow: 0px -4px 15px 0px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .button {
+          cursor: pointer;
+          padding: 10px 10%;
+          font-weight: 500;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .filtersNeedOffer {
+    justify-content: flex-end;
+    width: 100%;
+
+    & > button {
+      flex-basis: 33.3%;
+      width: 100%;
+    }
+  }
+
+  .filtersCoach {
+    justify-content: flex-end;
+    flex-basis: 33.3%;
+
+    & > button {
+      width: 100%;
+      flex-basis: auto;
+    }
+  }
+
+  .filterByName {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-basis: 66.6%;
+
+    .textDesktop {
+      display: none;
+      @media (min-width: $breakpoint-xl) {
+        display: block;
+      }
+    }
+
+    .inputWrapper {
+      width: 100%;
+      max-width: 430px;
+      position: relative;
+      @media (min-width: $breakpoint-xl) {
+        width: auto;
+      }
+
+      .input {
+        padding-right: 35px;
+
+        &::placeholder {
+          @media (min-width: $breakpoint-xl) {
+            color: transparent;
+          }
+        }
+      }
+
+      .button {
+        position: absolute;
+        top: 50%;
+        right: 11.25px;
+        transform: translateY(-50%);
+        display: flex;
+        gap: 10px;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+
+      .icon {
+        height: 100%;
+      }
+    }
+
+    & > span {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  .filtersWrapper {
+    display: none;
+
+    @media (min-width: $breakpoint-xl) {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      flex-wrap: nowrap;
+      gap: 2%;
+    }
+
+    & span {
+      font-weight: 400;
+    }
+
+    .filters,
+    .sort {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+
+      @media (min-width: $breakpoint-md) {
+        flex-direction: row;
+      }
+
+      span {
+        white-space: nowrap;
+      }
+    }
+
+    .buttonWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .reset {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        color: $c-green;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.statusText {
+  display: flex;
+  justify-content: center;
+}

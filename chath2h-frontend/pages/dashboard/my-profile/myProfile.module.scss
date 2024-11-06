@@ -1,0 +1,56 @@
+@import '/styles/vars.scss';
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 781px;
+  padding: 36px 4%;
+
+  @media (min-width: $breakpoint-sm) {
+    padding: 0 5vw;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    margin: 0 auto;
+    padding: 54px 4%;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: normal;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    margin: 37px 0 36px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    font-weight: 500;
+    border-bottom: 1px solid #39aba4;
+  }
+
+  .coachProfileForm {
+    @media (min-width: $breakpoint-md) {
+      padding-left: 47px;
+    }
+  }
+  .deleteAccount {
+    margin-top: 40px;
+    font-size: 14px;
+
+    .title {
+      font-weight: 500;
+      font-size: 16px;
+      width: 100%;
+      border-bottom: 1px solid $c-green;
+      margin-bottom: 32px;
+    }
+
+    & > button {
+      margin-top: 24px;
+    }
+  }
+}

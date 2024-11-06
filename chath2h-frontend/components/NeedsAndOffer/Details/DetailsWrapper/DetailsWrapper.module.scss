@@ -1,0 +1,66 @@
+@import 'styles/vars.scss';
+
+.container {
+  .addOffer {
+    display: none;
+    height: 80px;
+    padding: 24px 4%;
+    text-align: right;
+
+    @media (min-width: $breakpoint-md) {
+      display: block;
+      padding: 24px 10%;
+    }
+
+    button {
+      height: 32px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $c-white;
+      width: 156px;
+      border: none;
+      cursor: pointer;
+
+      &::before {
+        content: '+';
+        margin-right: 2px;
+      }
+    }
+  }
+
+  .details {
+    cursor: pointer;
+  }
+
+  .detailsTitle {
+    height: 55px;
+    border: solid $c-lightGrey;
+    border-width: 1px 0;
+    display: flex;
+    align-items: center;
+
+    .title {
+      margin-left: 4%;
+      font-weight: 500;
+
+      @media (min-width: $breakpoint-md) {
+        margin-left: 10%;
+      }
+    }
+  }
+}
+.chatButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 40px 24px;
+}
+
+.dialogDetails {
+  @media (min-width: $breakpoint-modal-bp) {
+    min-width: 650px;
+  }
+}

@@ -1,0 +1,138 @@
+@import 'styles/vars.scss';
+
+.container {
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  width: 100%;
+
+  @media (min-width: $breakpoint-modal-bp) {
+    width: 180px;
+  }
+
+  .title {
+    display: block;
+    font-weight: 400;
+    color: #191919;
+    margin-bottom: 12px;
+  }
+
+  .subTitle {
+    display: block;
+    font-weight: 400;
+    color: $c-darkGrey;
+    margin-bottom: 15px;
+  }
+
+  .marginCircleAvatar {
+    margin-bottom: 24px;
+  }
+
+  .actionCircle {
+    flex-direction: column;
+
+    @media (min-width: 320px) {
+      flex-direction: row;
+    }
+
+    @media (min-width: $breakpoint-modal-bp) {
+      flex-direction: column;
+    }
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+
+    @media (min-width: 320px) {
+      flex-direction: row;
+      align-items: flex-end;
+      column-gap: 2%;
+    }
+
+    @media (min-width: $breakpoint-modal-bp) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4.56%;
+    }
+
+    .image {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid $c-lightGrey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 130px;
+      width: 130px;
+
+      @media (min-width: $breakpoint-modal-bp) {
+        height: 180px;
+        width: 100%;
+        margin-bottom: 24px;
+      }
+    }
+
+    .circleImage {
+      border-radius: 100%;
+      height: 130px;
+      width: 130px;
+
+      @media (min-width: $breakpoint-modal-bp) {
+        height: 180px;
+        width: 180px;
+      }
+    }
+
+    .pointer {
+      width: fit-content;
+
+      @media (min-width: $breakpoint-modal-bp) {
+        width: 100%;
+        flex-basis: 33%;
+      }
+    }
+
+    .buttonSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      width: auto;
+
+      @media (min-width: $breakpoint-modal-bp) {
+        width: 100%;
+      }
+
+      .styleInput {
+        display: block;
+        padding: 5px 20px 5px 20px;
+        width: 100%;
+        border: 1px solid $c-green;
+        border-radius: 4px;
+        background: $c-white;
+        color: $c-green;
+        text-align: center;
+        transition: all 0.1s ease-in-out;
+        font-size: 16px;
+
+        @media (min-width: $breakpoint-modal-bp) {
+          font-size: 12px;
+        }
+
+        &:hover {
+          box-shadow: 0 0 10px -2px $c-green;
+        }
+      }
+
+      .uploadText {
+        text-align: center;
+        display: block;
+        margin-top: 8px;
+        font-size: 10px;
+        color: $c-darkGrey;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import 'styles/vars.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  margin: 36px 10% 20px;
+  flex-direction: column;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    margin-right: 15%;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $breakpoint-xl) {
+    margin-left: calc(23% - 300px);
+    margin-right: 23%;
+  }
+}

@@ -1,0 +1,17 @@
+.container {
+  .layout {
+    display: grid;
+    grid-template-columns: 18rem 1fr;
+    grid-template-rows: 80px 1fr;
+    min-height: 100vh;
+  }
+
+  .aside {
+    grid-area: 1 / 1 / 4 / 2;
+  }
+
+  .main {
+    padding: 20px;
+    grid-area: 1 / 2 / 3 / 3;
+  }
+}

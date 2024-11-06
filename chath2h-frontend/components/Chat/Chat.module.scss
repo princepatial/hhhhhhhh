@@ -1,0 +1,144 @@
+@import 'styles/vars.scss';
+
+.container {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 165px);
+  font-style: normal;
+  line-height: normal;
+
+  @media screen and (min-width: $breakpoint-lg) {
+    width: 75%;
+    height: calc(100vh - 64px);
+  }
+
+  .conversation {
+    flex: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+
+    .waiting {
+      margin: 16px 0 26px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 17.28px;
+      color: $c-black;
+    }
+
+    .user {
+      border-radius: 16px;
+      background: $c-white;
+      display: inline-flex;
+      padding: 8px 24px;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
+    }
+
+    .messages {
+      overflow: auto;
+      height: 100%;
+      padding: 20px 5%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      @media screen and (min-width: $breakpoint-lg) {
+        padding: 34px 15% 0 15%;
+      }
+    }
+  }
+
+  .conversationChat {
+    align-items: normal;
+  }
+
+  .footer {
+    width: 100%;
+
+    .line {
+      margin: 0;
+      background: $c-lightGrey;
+      width: auto;
+      height: 1px;
+      margin-bottom: 16px;
+
+      @media (min-width: $breakpoint-lg) {
+        margin: 37px 14.04% 0;
+      }
+    }
+
+    .textAreaWrapper {
+      background: #fff;
+      padding: 16px 4% 10px 4%;
+      display: flex;
+
+      @media (min-width: $breakpoint-lg) {
+        margin: 16px 14.04% 19px 14.04%;
+        border-radius: 8px;
+        height: 116px;
+      }
+
+      .field {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: $c-darkGrey;
+        z-index: 1;
+
+        .error {
+          color: $c-red;
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        .textarea {
+          height: 100%;
+          padding: 0;
+          border: none;
+          font-size: 14px;
+          color: $c-black;
+          font-weight: 400;
+          resize: none;
+          font-family: inherit;
+
+          &:focus-visible {
+            outline: none;
+          }
+
+          &::placeholder {
+            font-weight: 300;
+          }
+        }
+      }
+
+      .sendButton {
+        height: auto;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        height: fit-content;
+        cursor: pointer;
+        z-index: 1;
+
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}

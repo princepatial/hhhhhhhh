@@ -1,0 +1,145 @@
+@import 'styles/vars.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+
+  @media (min-width: $breakpoint-md) {
+    justify-content: end;
+  }
+
+  .backgroundImg {
+    position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+
+    @media (min-width: 1080px) {
+      width: 100%;
+    }
+  }
+
+  .title {
+    color: $c-black;
+    font-size: 40px;
+    font-style: normal;
+    line-height: 51.8px;
+    font-weight: 500;
+
+    span {
+      color: $c-green;
+    }
+  }
+
+  .box {
+    border-radius: 16px;
+    border: 1px solid $c-silver;
+    background: rgba(255, 255, 255, 0.85);
+    width: 90%;
+    z-index: 1;
+
+    @media (min-width: $breakpoint-md) {
+      width: auto;
+    }
+  }
+
+  .formBox {
+    padding: 15px;
+    margin: auto;
+
+    @media (min-width: $breakpoint-md) {
+      margin-right: 15%;
+      padding: 72px 36px 71px 42px;
+      max-width: 505px;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .subtitle {
+      color: $c-black;
+      margin-top: 16px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+    }
+
+    .inputWrapper {
+      margin-top: 74px;
+      height: 35px;
+      align-items: center;
+
+      .input {
+        font-size: 16px;
+        text-align: left;
+        padding-left: 8px;
+        width: 100%;
+        color: $c-black;
+
+        &::placeholder {
+          color: $c-grey;
+        }
+      }
+    }
+
+    .errorText {
+      font-size: 14px;
+      padding: 5px 0;
+      color: red;
+      font-weight: 300;
+    }
+
+    .buttons {
+      margin: 48px 0 0 auto;
+      display: flex;
+      gap: 4%;
+      justify-content: flex-end;
+      width: 70%;
+
+      .button {
+        flex: 1;
+        padding: 10px 7%;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .successBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: unset;
+    padding: 15px;
+    width: 90%;
+    height: fit-content;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 72px 42px 68px;
+      height: 308px;
+      max-width: 503.366px;
+      margin-right: 15%;
+    }
+
+    .success {
+      width: auto;
+
+      .successText {
+        line-height: 24px;
+        margin-top: 16px;
+        color: $c-black;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+}

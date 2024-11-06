@@ -1,0 +1,18 @@
+@import 'styles/vars.scss';
+
+.subTitle {
+  display: block;
+  margin-top: -12px;
+}
+
+.popupButton {
+  background-color: $c-green;
+  height: 40px;
+  width: 140px;
+}
+
+.textAfterSubTitle {
+  display: block;
+  margin: 40px 0 12px;
+  font-weight: 500;
+}

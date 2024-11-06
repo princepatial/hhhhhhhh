@@ -1,0 +1,74 @@
+@import 'styles/vars.scss';
+
+.container {
+  line-height: normal;
+  max-width: 950px;
+
+  .titleLink {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 37px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .link {
+      font-weight: 500;
+      color: $c-green;
+
+      &:hover {
+        color: $c-limeGreen;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 24px 0 16px;
+  }
+
+  .content {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+  }
+
+  .tableWrapper {
+    overflow-x: auto;
+
+    .warning {
+      display: block;
+      color: $c-red;
+      font-weight: 500;
+      font-size: 16px;
+      padding-top: 16px;
+    }
+  }
+
+  table {
+    margin-top: 30px;
+    width: 100%;
+
+    .categoryName {
+      width: 33%;
+    }
+
+    .list {
+      padding-left: 20px;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid $c-grey;
+    border-collapse: collapse;
+    padding: 10px;
+  }
+}

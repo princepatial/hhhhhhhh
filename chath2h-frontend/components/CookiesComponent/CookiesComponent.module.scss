@@ -1,0 +1,47 @@
+@import 'styles/vars.scss';
+
+.dialog {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 30px;
+
+  @media screen and (min-width: $breakpoint-md) {
+    flex-direction: row;
+    gap: unset;
+  }
+
+  .privacy {
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 4%;
+
+    .textTop {
+      margin-top: 10px;
+    }
+
+    & > a {
+      font-size: 14px;
+      font-weight: 500;
+      color: $c-green;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .overview {
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+}
+
+.buttonWrapper {
+  margin: auto 0;
+  display: flex;
+  gap: 15px;
+  padding: 0 4%;
+}

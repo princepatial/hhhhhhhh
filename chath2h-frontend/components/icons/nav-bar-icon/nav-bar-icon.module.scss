@@ -1,0 +1,21 @@
+.opened {
+  .topLine {
+    transform: translateY(10px) rotate(-45deg) scale(0.9);
+  }
+
+  .bottomLine {
+    transform: translateY(-10px) rotate(45deg) scale(0.9);
+  }
+
+  .middleLine {
+    opacity: 0;
+  }
+}
+
+.topLine,
+.bottomLine,
+.middleLine {
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 1;
+}

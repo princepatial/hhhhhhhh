@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "σύνδεση στην εφαρμογή",
+  "email-new-mailbox-message": "Νέο μήνυμα στο γραμματοκιβώτιό σας",
+  "email-confirmation": "Επιβεβαίωση μέσω e-mail",
+  "email-confirmation-link": "Κάντε κλικ παρακάτω για να επιβεβαιώσετε το email σας",
+  "email-ignore-info": "Εάν δεν ζητήσατε αυτό το email μπορείτε να το αγνοήσετε με ασφάλεια.",
+  "email-confirm": "Επιβεβαίωση",
+  "email-mailbox-message-awaiting": "Γεια σου, σε περιμένω στο chat.",
+  "email-mailbox-message-invitation": "Μεταβείτε στην πρόσκληση",
+  "email-mailbox-message-view-message": "Προβολή μηνύματος στην εφαρμογή",
+  "email-mailbox-message-hello": "Γεια σας",
+  "email-mailbox-message-got-new": "Έχετε ένα νέο",
+  "email-mailbox-message-chat-invitation": "πρόσκληση για συνομιλία",
+  "email-mailbox-message-message": "μήνυμα",
+  "assets": "περιουσιακά στοιχεία",
+  "User_offline_busy_1": "Γεια σας, θέλω να μιλήσω για",
+  "User_offline_busy_2": "πότε μπορούμε να συναντηθούμε;"
+}

@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "앱에 로그인",
+  "email-new-mailbox-message": "메일함의 새 메시지",
+  "email-confirmation": "이메일 확인",
+  "email-confirmation-link": "이메일을 확인하려면 아래를 클릭하세요.",
+  "email-ignore-info": "이 이메일을 요청하지 않은 경우 안전하게 무시해도 됩니다.",
+  "email-confirm": "확인",
+  "email-mailbox-message-awaiting": "채팅에서 기다리고 있어요.",
+  "email-mailbox-message-invitation": "초대로 이동",
+  "email-mailbox-message-view-message": "앱에서 메시지 보기",
+  "email-mailbox-message-hello": "안녕하세요",
+  "email-mailbox-message-got-new": "새로운",
+  "email-mailbox-message-chat-invitation": "채팅 초대",
+  "email-mailbox-message-message": "메시지",
+  "assets": "자산",
+  "User_offline_busy_1": "안녕하세요.",
+  "User_offline_busy_2": "언제 만날 수 있을까요?"
+}

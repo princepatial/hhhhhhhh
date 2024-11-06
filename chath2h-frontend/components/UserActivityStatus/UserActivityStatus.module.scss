@@ -1,0 +1,19 @@
+@import '/styles/vars.scss';
+.circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid white;
+}
+.online {
+  background-color: $c-green;
+}
+
+.offline {
+  background-color: $c-darkGrey;
+}
+
+.busy {
+  background-color: $c-yellow;
+}

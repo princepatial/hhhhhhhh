@@ -1,0 +1,32 @@
+@import 'styles/vars.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  min-height: calc(100vh - 64px);
+  height: 100%;
+  overflow: hidden;
+
+  .welcomeMsgWrapper {
+    width: fit-content;
+    flex: 1;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+
+    .welcomeMsg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 60%;
+    }
+
+    .isHidden {
+      display: none;
+
+      @media (min-width: $breakpoint-xl) {
+        display: flex;
+      }
+    }
+  }
+}

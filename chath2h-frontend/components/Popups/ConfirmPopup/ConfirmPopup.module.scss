@@ -1,0 +1,27 @@
+@import 'styles/vars.scss';
+
+.container {
+  width: 100%;
+  font-weight: 300;
+  @media (min-width: $breakpoint-lg) {
+    width: 748px;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-end;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+    }
+  }
+}

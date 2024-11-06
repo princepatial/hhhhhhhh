@@ -1,0 +1,209 @@
+@import 'styles/vars.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  margin-top: -64px;
+
+  .firstPhotoTitle {
+    text-shadow: 6px 5px 6px rgba(0, 0, 0, 0.43);
+    bottom: 50px;
+
+    @media (min-width: $breakpoint-xl) {
+      font-size: 56px !important;
+    }
+  }
+
+  .secondPhotoTitle {
+    bottom: 50px;
+  }
+
+  .firstPhotoCaption {
+    font-size: 16px;
+    list-style-type: none !important;
+
+    li {
+      text-align: left;
+
+      @media screen and (min-width: $breakpoint-md) {
+        text-align: start;
+      }
+
+      &::before {
+        content: '•';
+        color: $c-black;
+        margin-right: 10px;
+      }
+    }
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  .iframeWrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    margin: 0 30px;
+
+    .iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+
+  .registerLoginButton {
+    font-size: 12px
+  }
+
+  .loyal {
+    margin-top: 26px;
+  }
+
+  .photo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .joinInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: $c-white;
+    text-align: center;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    padding: 20px 40px;
+    background: rgba(57, 171, 164, 0.85);
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 28px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      font-size: 34px;
+    }
+
+    span {
+      max-width: 629px;
+    }
+  }
+
+  .lastPhoto {
+    position: relative;
+    width: 100%;
+
+    .joinNow {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      right: 15px;
+      color: $c-white;
+      text-align: center;
+      text-shadow: 0px 5px 6px $c-green;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 30px;
+        right: 10%;
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        font-size: 40px;
+      }
+
+      @media (min-width: $breakpoint-xl) {
+        font-size: 48px;
+        bottom: 226px;
+        right: 15%;
+      }
+    }
+  }
+
+  .betweenPhoto {
+    display: flex;
+    align-items: center;
+    height: 63px;
+    color: rgba(57, 171, 164, 1);
+    width: 100%;
+    text-align: left;
+    margin-left: 38px;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .textImg {
+    margin: 80px 0 97px;
+  }
+
+  .textBackground {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-width: $breakpoint-md) {
+      background-size: contain;
+    }
+  }
+
+  .firstBackground,
+  .secondBackground {
+    background-image: url('/images/landing_page/background1.png');
+    background-size: 130% auto;
+
+    @media (min-width: $breakpoint-md) {
+      background-size: 100% auto;
+    }
+
+    .alt {
+      background-size: contain;
+    }
+  }
+
+  //.secondBackground_old {
+  //  background-image: url('/images/landing_page/background2.png');
+  //  background-position: 50% center;
+  //  background-size: auto 90%;
+  //
+  //  @media (min-width: $breakpoint-md) {
+  //    background-size: cover;
+  //    background-position: center center;
+  //  }
+  //}
+}
+
+.desktop_only_element {
+  @media screen and (max-width: $breakpoint-md) {
+    display: none !important;
+  }
+}
+
+.enlarged_image {
+  max-height: 150px !important;
+}

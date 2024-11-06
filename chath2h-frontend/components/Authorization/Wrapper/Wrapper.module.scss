@@ -1,0 +1,57 @@
+@import 'styles/vars.scss';
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .box {
+    border: 1px solid $c-silver;
+    border-radius: 18px;
+    background: $c-white;
+    z-index: 1;
+    padding: 40px;
+
+    @media screen and (max-width: $breakpoint-sm) {
+      padding: 5px 10px;
+    }
+
+    .title {
+      color: black;
+      font-size: 24px;
+      font-weight: 500;
+      position: relative;
+
+      .border {
+        margin-top: 7px;
+        border-bottom: 3px solid $c-green;
+        position: absolute;
+        left: 0;
+        right: 90%;
+      }
+    }
+  }
+
+  .backgroundImg {
+    position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    object-fit: cover;
+
+    @media (min-width: 1080px) {
+      width: 100%;
+    }
+
+    .info {
+      margin-top: 100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

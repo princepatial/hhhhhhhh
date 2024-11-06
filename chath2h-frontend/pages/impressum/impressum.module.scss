@@ -1,0 +1,40 @@
+@import 'styles/vars.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 950px;
+  margin: 36px auto;
+  padding: 0 25px;
+
+  .header {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  .paragraph {
+    margin-bottom: 24px;
+
+    .title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    p {
+      margin-bottom: 16px;
+    }
+
+    ul {
+      margin-left: 16px;
+
+      a {
+        color: $c-green;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import 'styles/vars.scss';
+
+.container {
+  display: flex;
+  font-size: 16px;
+  line-height: 24px;
+  color: $c-black;
+  width: 100%;
+  justify-content: flex-end;
+
+  &.container__center {
+    justify-content: center;
+  }
+
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20%;
+    padding: 0 2.4%;
+    font-size: 16px;
+    font-weight: 500;
+    height: 64px;
+    line-height: normal;
+    transition:
+      color 0.1s ease-in-out,
+      background 0.1s ease-out,
+      border 0.1s ease-out;
+
+    &:not(.white) {
+      border: 2px solid transparent;
+    }
+
+    &.homePage {
+      color: $c-white;
+      min-width: auto;
+    }
+
+    &.active {
+      border-bottom: 2px solid $c-green;
+      background: $c-silver;
+      padding: 20px;
+    }
+
+    &:hover {
+      color: $c-green;
+    }
+  }
+}
+
+.mobileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

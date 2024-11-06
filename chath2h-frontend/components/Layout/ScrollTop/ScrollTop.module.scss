@@ -1,0 +1,19 @@
+@import 'styles/vars.scss';
+
+.container {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 9;
+
+  .scrollWrapper {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: $c-green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}

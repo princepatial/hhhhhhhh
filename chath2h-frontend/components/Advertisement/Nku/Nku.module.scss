@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+
+  .addNku {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .action {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: max-content;
+
+    .iconButton {
+      width: 35px;
+      height: 35px;
+      padding: 5px;
+      fill: white;
+    }
+  }
+
+  .adminAdvert {
+    opacity: 0.5;
+
+    &:hover {
+      cursor: grab;
+    }
+  }
+
+  .nku {
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 8px;
+  }
+}

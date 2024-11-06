@@ -1,0 +1,198 @@
+<html>
+  <head>
+    <link
+      href='https://fonts.googleapis.com/css?family=Poppins'
+      rel='stylesheet'
+    />
+  </head>
+  <body
+    style="width: 600px; margin: 0px auto; font-family: 'Poppins', sans-serif"
+  >
+    <table style='width: 100%'>
+      <tr>
+        <td style='position: relative; padding-top: 30px'>
+          <table style='padding: 0px 45px 0 50px; height: 140px; width: 100%'>
+            <tr>
+              <td style='text-align: right'>
+                <img
+                  src='https://h2h-chat.test.neti-soft.com/h2h-logo.png'
+                  alt='h2h-logo.png'
+                  style='display: inline-block'
+                />
+              </td>
+            </tr>
+          </table>
+          <table style='height: 133px; background-color: #39aba4; width: 100%'>
+            <tr>
+              <td style='text-align: center; vertical-align: middle'>
+                <img
+                  src='https://h2h-chat.test.neti-soft.com/envelop.png'
+                  alt='envelop.png'
+                />
+              </td>
+            </tr>
+          </table>
+          <table
+            style='box-sizing: border-box; padding: 0px 45px 0 50px; width: 100%'
+          >
+            <tr>
+              <td
+                style='
+                  border: 1px solid #39aba4;
+                  border-radius: 16px;
+                  margin-top: 36px;
+                  margin-bottom: 85px;
+                  padding: 30px;
+                  display: block;
+                '
+              >
+                <div style='margin-bottom: 20px; text-align: center'>
+                  <div
+                    style='color: #39aba4; font-size: 40px; font-weight: 500; margin-bottom: 10px'
+                  >
+                    {{t 'common.email-mailbox-message-hello'}}
+                    {{name}}!
+                  </div>
+                  <div
+                    style='color: #141414; font-size: 18px; font-weight: 300; line-height: 108%'
+                  >
+                    {{t 'common.email-mailbox-message-got-new'}}
+                    <span
+                      style='color: #141414; font-size: 18px; font-weight: 700; line-height: 108%'
+                    >
+                      {{#if isInvitation}}
+                        {{t 'common.email-mailbox-message-chat-invitation'}}
+                      {{else}}
+                        {{t 'common.email-mailbox-message-message'}}
+                      {{/if}}
+                    </span>
+                  </div>
+                </div>
+                <div style='width: 100%; height: 88px'>
+                  <img
+                    style='
+                      width: 88px;
+                      height: 88px;
+                      border-radius: 100%;
+                      background-color: #fff;
+                      vertical-align: middle;
+                      line-height: normal;
+                    '
+                    src='{{avatar}}'
+                    alt='avatar'
+                  />
+                  <span
+                    style='
+                      vertical-align: middle;
+                      line-height: normal;
+                      color: #141414;
+                      font-size: 24px;
+                      font-weight: 500;
+                      line-height: normal;
+                    '
+                  >{{from}}</span>
+                </div>
+                <div
+                  style='
+                    border-radius: 16px;
+                    background: rgba(57, 171, 164, 0.15);
+                    height: 199px;
+                    width: 423px;
+                    box-sizing: border-box;
+                    padding: 20px 45px;
+                  '
+                >
+                  {{#if isInvitation}}
+                    <div
+                      style='color: #141414; font-size: 24px; font-weight: 400; line-height: normal'
+                    >
+                      {{content}}
+                    </div>
+                    <div
+                      style='
+                      color: #39aba4;
+                      font-size: 24px;
+                      font-weight: 400;
+                      line-height: normal;
+                      margin-top: 50px;
+                    '
+                    >
+                      {{t 'common.email-mailbox-message-awaiting'}}
+                    </div>
+                  {{else}}
+                    <div
+                      style='color: #141414; font-size: 20px; font-weight: 300; line-height: normal'
+                    >
+                      {{content}}
+                    </div>
+                  {{/if}}
+                </div>
+              </td>
+            </tr>
+          </table>
+          <table
+            style='
+              margin: 75px 0px;
+              background-color: #39aba4;
+              cursor: pointer;
+              border-radius: 8px;
+              width: 100%;
+              text-align: center;
+            '
+          >
+            <tr>
+              <td>
+                <a
+                  href='{{url}}'
+                  style='
+                    color: #fff;
+                    font-size: 25px;
+                    font-weight: 400;
+                    line-height: normal;
+                    background-color: #39aba4;
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 15px 30px;
+                    border-radius: 8px;
+                  '
+                  target='_blank'
+                >
+                  {{#if isInvitation}}
+                    {{t 'common.email-mailbox-message-invitation'}}
+                  {{else}}
+                    {{t 'common.email-mailbox-message-view-message'}}
+                  {{/if}}
+                </a>
+              </td>
+            </tr>
+          </table>
+          <div style='text-align: center;'>
+            <div
+              style='width: 348px; background-color: #39aba4; height: 2px; margin-bottom: 28px; display: inline-block;'
+            ></div>
+          </div>
+          <div style='display: inline-block;'>
+            <img
+              src='https://h2h-chat.test.neti-soft.com/h2h-logo.png'
+              alt='h2h-logo.png'
+              style='display: inline-block;'
+            />
+          </div>
+          <div
+            style='display: inline-block; float: right; position: relative; margin-top: 8px;'
+          >
+            <img
+              src='https://h2h-chat.test.neti-soft.com/linkedIn.png'
+              alt='linkedIn.png'
+              style='margin-right: 39px;'
+            />
+            <img
+              src='https://h2h-chat.test.neti-soft.com/globe.png'
+              alt='globe.png'
+            />
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

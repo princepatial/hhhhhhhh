@@ -1,0 +1,46 @@
+@import 'styles/vars.scss';
+
+.advertisementBlock {
+  position: relative;
+
+  .adsHeader {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 1vh 2vw;
+    margin-bottom: 1vh;
+    color: $c-darkGrey;
+    font-weight: 500;
+
+    @media (min-width: $breakpoint-xl) {
+      max-height: unset;
+      margin: 1vh 0;
+    }
+
+    .adsText {
+      color: $c-white;
+    }
+  }
+
+  .advertisement {
+    position: sticky;
+    top: 64px;
+
+    .imageWrapper {
+      position: relative;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+  }
+
+  .closeMobileButton {
+    display: block;
+
+    @media (min-width: $breakpoint-xl) {
+      display: none;
+    }
+  }
+}

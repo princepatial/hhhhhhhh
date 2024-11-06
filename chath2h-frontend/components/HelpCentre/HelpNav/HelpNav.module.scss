@@ -1,0 +1,36 @@
+@import 'styles/vars.scss';
+
+.container {
+  font-size: 20px;
+  line-height: normal;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  width: 100%;
+  column-gap: 20px;
+
+  @media screen and (min-width: $breakpoint-s) {
+    width: auto;
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    flex-direction: column;
+    margin: 0 5%;
+  }
+
+  .link {
+    @media screen and (min-width: $breakpoint-lg) {
+      min-width: 250px;
+      padding: 0 7% 7%;
+    }
+
+    &:hover {
+      color: $c-green;
+    }
+  }
+
+  .active {
+    color: $c-green;
+    font-weight: 500;
+  }
+}

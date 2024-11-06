@@ -1,0 +1,18 @@
+{
+  "login-to-the-app": "登录应用程序",
+  "email-new-mailbox-message": "您邮箱中的新邮件",
+  "email-confirmation": "电子邮件确认",
+  "email-confirmation-link": "请点击以下链接确认您的电子邮件",
+  "email-ignore-info": "如果您没有要求发送这封邮件，您可以放心地忽略它。",
+  "email-confirm": "确认",
+  "email-mailbox-message-awaiting": "嘿，我在聊天室等你。",
+  "email-mailbox-message-invitation": "转到邀请函",
+  "email-mailbox-message-view-message": "在应用程序中查看信息",
+  "email-mailbox-message-hello": "你好",
+  "email-mailbox-message-got-new": "你有了一个新的",
+  "email-mailbox-message-chat-invitation": "聊天邀请",
+  "email-mailbox-message-message": "信息",
+  "assets": "资产",
+  "User_offline_busy_1": "你好，我想谈谈",
+  "User_offline_busy_2": "我们什么时候能见面？"
+}

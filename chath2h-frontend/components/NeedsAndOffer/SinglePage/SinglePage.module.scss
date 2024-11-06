@@ -1,0 +1,147 @@
+@import 'styles/vars.scss';
+
+.container {
+  overflow: hidden;
+  position: relative;
+  @media screen and (min-width: $breakpoint-lg) {
+    display: flex;
+  }
+
+  .sideNav {
+    width: 100%;
+    height: calc(100vh - 64px);
+    overflow: auto;
+    @media screen and (min-width: $breakpoint-lg) {
+      width: 465px;
+      overflow: hidden;
+    }
+
+    .itemDetails {
+      padding: 42px 32px 25px 32px;
+
+      @media screen and (min-width: $breakpoint-lg) {
+        padding-bottom: 52px;
+      }
+
+      .backLink {
+        color: $c-green;
+        font-size: 12px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 28px;
+
+        @media screen and (min-width: $breakpoint-lg) {
+          margin-bottom: 48px;
+        }
+
+        .arrow {
+          transform: rotate(180deg);
+        }
+      }
+
+      .buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .button {
+          height: 40px;
+          font-size: 16px;
+          font-weight: 500;
+          padding: 0 30px;
+
+          &:disabled {
+            border: none;
+            color: $c-white;
+          }
+
+          @media screen and (min-width: $breakpoint-md) {
+            padding: 0 15px;
+
+            @media screen and (min-width: $breakpoint-lg) {
+              padding: 0 30px;
+              height: 32px;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .deleteButton {
+          gap: 5px;
+
+          @media screen and (min-width: $breakpoint-md) {
+            padding: 0 20px;
+          }
+
+          .deleteText {
+            display: none;
+
+            @media screen and (min-width: $breakpoint-lg) {
+              display: block;
+            }
+          }
+        }
+
+        .rightButtons {
+          display: flex;
+          gap: 16px;
+        }
+      }
+    }
+  }
+
+  .chatsList {
+    .title {
+      padding: 0 0 20px 40px;
+      display: block;
+      font-weight: 500;
+    }
+    .list {
+      height: calc(50vh - 50px);
+      overflow: auto;
+
+      .noChats {
+        height: 70%;
+        font-size: 18px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .item {
+        cursor: pointer;
+        padding: 0 28px 0 24px;
+        height: 88px;
+        border-bottom: 1px solid $c-lightGrey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:first-child {
+          border-top: 1px solid $c-lightGrey;
+        }
+
+        .user {
+          display: flex;
+          gap: 16px;
+          font-size: 14px;
+          font-weight: 500;
+
+          .firstName {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .date {
+          font-size: 12px;
+          color: $c-grey;
+        }
+      }
+    }
+  }
+}

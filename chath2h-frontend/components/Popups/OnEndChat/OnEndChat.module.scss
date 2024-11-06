@@ -1,0 +1,52 @@
+@import 'styles/vars.scss';
+
+.subTitleStyle {
+  display: block;
+}
+
+.rightButton {
+  padding: 10px 41.5px;
+}
+
+.leftButton {
+  padding: 10px 32px;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  margin: 48px 0 18px;
+
+  .title {
+    color: $c-black;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+
+  .stars {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .starCol {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $c-black;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 108%;
+
+      .starButton {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

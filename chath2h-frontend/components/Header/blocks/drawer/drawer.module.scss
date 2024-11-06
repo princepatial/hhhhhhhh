@@ -1,0 +1,80 @@
+@import 'styles/vars.scss';
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $c-white;
+  transition: width 0.3s ease-in-out;
+
+  &__header {
+    background-color: $c-lightGrey;
+    font-weight: 500;
+    padding: 5px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    &__item {
+      min-width: 100%;
+      width: 100%;
+      transition: 350ms cubic-bezier(0.12, 0.92, 0.67, 0.99);
+
+      display: flex;
+      flex-direction: column;
+
+      &__hidden {
+        height: 200px;
+        opacity: 0;
+        overflow: hidden;
+      }
+
+      .wallet {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid $c-lightGrey;
+        @media screen and (min-width: $breakpoint-sm) {
+          display: none;
+        }
+      }
+
+      .back {
+        display: flex;
+        align-items: center;
+        padding: 15px 25px;
+        cursor: pointer;
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .mobileItem {
+    width: 100%;
+    padding: 15px 25px;
+    border-bottom: 1px solid $c-lightGrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
