@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "Du vill skicka ett meddelande till",
   "CategoriesHelpPage_furtherDevelopment_text_2": "Hur och av vilka faktorer mynt kan påverkas är en vetenskap i sig. Denna artikel är bland annat intressant:",
   "dashboard_to_areas": "Kategorier",
-  "dashboard_to_areas_description": "Lägg till ett nytt behov eller erbjudande"
+  "dashboard_to_areas_description": "Lägg till ett nytt behov eller erbjudande",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

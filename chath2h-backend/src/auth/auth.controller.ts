@@ -32,7 +32,7 @@ export class AuthController {
     private strategy: MagicLoginStrategy,
   ) {}
 
-  @Post('login') // Change this from @Post() to @Post('login')
+  @Post('') // Change this from @Post() to @Post('login')
   async login(
     @Req() req: Request,
     @Res() res: Response,
@@ -56,17 +56,26 @@ export class AuthController {
   }
 
   @UseGuards(MagicLoginGuard)
-  @Get('*/callback')
-  callback(@Req() req: Request, @Res() res: Response) {
-    const userId = req.user._id;
-    if (!userId)
-      throw new GlobalSkippableConflictException({
-        statusCode: 409,
-        message: 'User needs to complete the registration',
-        skipGlobalExceptionHandler: true,
-      });
-    res.send(userId);
+@Get('*/callback')
+callback(@Req() req: Request, @Res() res: Response) {
+  const userId = req.user._id;
+  if (!userId) {
+    throw new GlobalSkippableConflictException({
+      statusCode: 409,
+      message: 'User needs to complete the registration',
+      skipGlobalExceptionHandler: true,
+    });
   }
+
+  // Redirect the user to the registration page without any further redirection
+  res.redirect(`/en/register?token=${req.query.token}`);
+
+  // Do not send any response or perform any other actions
+  // Return immediately to prevent any further processing
+  return;
+}
+
+
 
   @Get('me')
   async me(@Req() req: Request) {

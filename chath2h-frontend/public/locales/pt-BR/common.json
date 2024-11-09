@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "Você deseja enviar uma mensagem para",
   "CategoriesHelpPage_furtherDevelopment_text_2": "Como e por quais fatores as moedas podem ser influenciadas é uma ciência em si. Este artigo é interessante, entre outras coisas:",
   "dashboard_to_areas": "Categorias",
-  "dashboard_to_areas_description": "Adicionar uma nova necessidade ou oferta"
+  "dashboard_to_areas_description": "Adicionar uma nova necessidade ou oferta",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

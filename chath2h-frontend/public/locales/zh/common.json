@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "您想将信息发送至",
   "CategoriesHelpPage_furtherDevelopment_text_2": "硬币如何以及受哪些因素影响本身就是一门科学。这篇文章除其他内容外，还非常有趣：",
   "dashboard_to_areas": "类别",
-  "dashboard_to_areas_description": "添加新需求或报价"
+  "dashboard_to_areas_description": "添加新需求或报价",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

@@ -1,5 +1,5 @@
 import avatar from '@images/Avatar.png';
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 import classNames from 'classnames';
 import Button from 'components/Button';
 import FieldInput from 'components/Inputs/FieldInput';
@@ -39,23 +39,11 @@ type Props = {
   handleCancel: () => void;
 };
 
-const defaultValues = {
-  firstName: '',
-  lastName: '',
-  gender: undefined,
-  age: undefined,
-  language: undefined,
-  country: undefined,
-  city: '',
-  avatar: undefined,
-  education: undefined,
-  maritalStatus: undefined,
-  occupation: '',
-  professionalActivity: undefined,
-  email: undefined,
-  walletAddress: '',
-  privacyPolicy: false
-};
+interface RequestParams {
+  token?: string;
+  refToken?: string;
+}
+
 
 type IsMulti = boolean;
 
@@ -129,15 +117,35 @@ const customStylesSelect: StylesConfig<SelectOptions, IsMulti> = {
 
 const RegisterForm = ({ isEdit, handleCancel }: Props) => {
   const router = useRouter();
-  const token = router.query.token;
-  const refToken = router.query.refToken;
+  const refToken = router.query.refToken as string;
   const [selectedImage, setSelectedImage] = useState<string>();
-  const [initialValues, setInitialValues] = useState<RegisterFormType>(defaultValues);
   const [user] = useGlobalState('user');
   const { t } = useTranslation('common');
   const { isLoading, ltrack } = useLoadingTracker();
   const [uiLanguage] = useGlobalState('language');
+  const [token, setToken] = useState<string | null>(null);
 
+
+
+   // Initialize form values
+ const defaultValues: RegisterFormType = {
+  firstName: '',
+  lastName: '',
+  gender: undefined,
+  age: undefined,
+  language: [],
+  country: undefined,
+  city: '',
+  avatar: undefined,
+  education: undefined,
+  maritalStatus: undefined,
+  occupation: '',
+  professionalActivity: '',
+  email: '',
+  walletAddress: '',
+  privacyPolicy: false
+};
+const [initialValues, setInitialValues] = useState<RegisterFormType>(defaultValues);
   const configGetOptions = { t };
   const countryOptions = useMemo(() => countryList().getData(), []);
   const languageOptions = useMemo(() => getLanguageOptions(languages), []);
@@ -162,123 +170,177 @@ const RegisterForm = ({ isEdit, handleCancel }: Props) => {
     [t]
   );
 
-  useEffect(() => {
-    if (isEdit && user) {
-      const {
-        firstName,
-        lastName,
-        gender,
-        age,
-        language,
-        country,
-        city,
-        avatar,
-        education,
-        maritalStatus,
-        occupation,
-        professionalActivity,
-        walletAddress
-      } = user;
-
-      const imageSrc = useImageUrl(avatar.filename);
-
-      setSelectedImage(imageSrc);
-
-      const newUserData = {
-        firstName: firstName,
-        lastName: lastName,
-        gender: genderOptions.find((option) => option.value === gender),
-        age: age,
-        language: languageOptions.filter((option) =>
-          language.find((language) => option.value === language)
-        ),
-        country: countryOptions.find((option) => option.value === country),
-        city: city,
-        avatar: undefined, // if it isn't changed send undefined
-        education: educationOptions.find((option) => option.value === education),
-        maritalStatus: maritalStatusOptions.find((option) => option.value === maritalStatus),
-        occupation: occupation,
-        professionalActivity,
-        walletAddress
-      };
-
-      setInitialValues(newUserData);
+    // Load user data for edit mode
+    useEffect(() => {
+      if (isEdit && user) {
+        const imageSrc = useImageUrl(user.avatar?.filename);
+        setSelectedImage(imageSrc);
+  
+        const transformedUserData = {
+  firstName: user.firstName,
+  lastName: user.lastName,
+  gender: genderOptions.find((option) => option.value === user.gender),
+  age: user.age,
+  language: languageOptions.filter((option) => {
+    if (Array.isArray(user.language)) {
+      return user.language.includes(option.value as string);
     }
-  }, [isEdit, user, t]);
-
-  const validationSchema = Yup.object().shape({
-    email: Yup.string()
-      .email(t('validation_email'))
-      .test('required', t('Register_required'), (value) => (refToken ? !!value : true)),
-    firstName: Yup.string().required(t('Register_required')),
-    lastName: Yup.string(),
-    gender: Yup.object().required(t('Register_required')),
-    age: Yup.number().typeError(t('Register_number_error')).required(t('Register_required')),
-    language: Yup.array()
-      .required(t('Register_required'))
-      .max(5, t('Register_max_5_lang'))
-      .min(1, t('Register_required')),
-    country: Yup.object().required(t('Register_required')),
-    city: Yup.string().required(t('Register_required')),
-    avatar: Yup.mixed<File>()
-      .test('required', t('Register_required'), (value) => (isEdit ? true : !!value))
-      .test('fileSize', t('Register_file_too_large'), (value) =>
-        isEdit ? true : value && value.size <= FILE_SIZE
-      )
-      .test('fileFormat', t('Register_unsupported_format'), (value) =>
-        isEdit ? true : value && SUPPORTED_FORMATS.includes(value.type)
-      ),
-    education: Yup.object().required(t('Register_required')),
-    maritalStatus: Yup.object(),
-    occupation: Yup.string(),
-    professionalActivity: Yup.string(),
-    privacyPolicy: Yup.bool().oneOf([true], t('Register_required'))
-  });
-
-  const handleSubmit = ltrack(async (values: RegisterFormType) => {
-    try {
-      const language = values.language ? values.language.map((item) => item.value) : [];
-
-      const reqValues = {
-        ...values,
-        language,
-        gender: values.gender?.value,
-        country: values.country?.value,
-        maritalStatus: values.maritalStatus?.value,
-        education: values.education?.value
-      };
-
-      const reqHeaders = {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      };
-
-      const endpoint = token && !refToken ? `?token=${token}` : `/referral?refToken=${refToken}`;
-
-      const registerResponse = isEdit
-        ? await axios.patch('/users', reqValues, reqHeaders)
-        : await axios.post(`/register${endpoint}`, reqValues, reqHeaders);
-
-      if (registerResponse) {
-        setGlobalState('user', registerResponse.data);
-        setGlobalState('isUserLogged', true);
-
-        if (!isEdit) {
-          toast.success(t('Register_user_added'));
-          toast.success(t('Register_have_got_tokens'), {
-            position: 'top-right',
-            autoClose: false
-          });
-          location.href = `/${uiLanguage.value}/dashboard`;
-        } else {
-          toast.success(t('Register_user_edited'));
-        }
-      } else {
-        throw Error();
+    if (typeof user.language === 'string') {
+      return user.language === option.value;
+    }
+    return false;
+  }),
+          country: countryOptions.find((option) => option.value === user.country),
+          city: user.city,
+          avatar: undefined,
+          education: educationOptions.find((option) => option.value === user.education),
+          maritalStatus: maritalStatusOptions.find(
+            (option) => option.value === user.maritalStatus
+          ),
+          occupation: user.occupation,
+          professionalActivity: user.professionalActivity,
+          walletAddress: user.walletAddress
+        };
+  
+        setInitialValues(transformedUserData);
       }
-    } catch (error) {
-      console.log(t('Register_error_register'), error);
+    }, [isEdit, user]);
+  
+
+ // Form validation schema
+ const validationSchema = Yup.object().shape({
+  email: Yup.string()
+    .email(t('validation_email'))
+    .test('required', t('Register_required'), (value) => (refToken ? !!value : true)),
+  firstName: Yup.string().required(t('Register_required')),
+  lastName: Yup.string(),
+  gender: Yup.object().required(t('Register_required')),
+  age: Yup.number()
+    .typeError(t('Register_number_error'))
+    .required(t('Register_required'))
+    .positive()
+    .integer(),
+  language: Yup.array()
+    .required(t('Register_required'))
+    .max(5, t('Register_max_5_lang'))
+    .min(1, t('Register_required')),
+  country: Yup.object().required(t('Register_required')),
+  city: Yup.string().required(t('Register_required')),
+  avatar: Yup.mixed<File>()
+    .test('required', t('Register_required'), (value) => (isEdit ? true : !!value))
+    .test('fileSize', t('Register_file_too_large'), (value) => 
+      isEdit ? true : value && value.size <= 5 * 1024 * 1024) // 5MB limit
+    .test('fileFormat', t('Register_unsupported_format'), (value) =>
+      isEdit ? true : value && ['image/jpeg', 'image/png', 'image/jpg'].includes(value.type)
+    ),
+  education: Yup.object().required(t('Register_required')),
+  maritalStatus: Yup.object(),
+  occupation: Yup.string(),
+  professionalActivity: Yup.string(),
+  privacyPolicy: Yup.bool().oneOf([true], t('Register_required'))
+});
+
+
+
+  useEffect(() => {
+    // Get token from URL when component mounts
+    const urlParams = new URLSearchParams(window.location.search);
+    const tokenFromUrl = urlParams.get('token');
+    setToken(tokenFromUrl);
+    
+    if (!tokenFromUrl) {
+      console.error('No token found in URL');
+      // Optionally redirect to login
+      // window.location.href = '/login';
     }
-  });
+  }, []);
+
+   // Handle form submission
+ // Handle form submission
+
+ const handleSubmit = async (values: RegisterFormType) => {
+  try {
+    if (!token && !refToken) {
+      toast.error(t('Register_token_required'));
+      return;
+    }
+
+    const formData = new FormData();
+
+    // Transform values with proper type safety
+    const transformedValues = {
+      firstName: values.firstName,
+      lastName: values.lastName || '',
+      gender: values.gender?.value || '',
+      country: values.country?.value || '',
+      age: values.age?.toString() || '',
+      // Ensure language is always an array of strings
+      language: values.language?.map(lang => String(lang.value)) || [],
+      city: values.city,
+      education: values.education?.value || '',
+      maritalStatus: values.maritalStatus?.value,
+      occupation: values.occupation || '',
+      professionalActivity: values.professionalActivity || '',
+      email: values.email || '',
+      walletAddress: values.walletAddress || '',
+      privacyPolicy: values.privacyPolicy ? 'true' : 'false'
+    };
+
+    // Handle language array with type safety
+    if (transformedValues.language.length > 0) {
+      transformedValues.language.forEach((lang, index) => {
+        if (lang) {
+          formData.append(`language[${index}]`, lang);
+        }
+      });
+    } else {
+      formData.append('language[]', '');
+    }
+
+    // Safely append other values to FormData
+    Object.entries(transformedValues).forEach(([key, value]) => {
+      if (value !== undefined && value !== null && key !== 'language') {
+        // Convert all values to string before appending
+        formData.append(key, String(value));
+      }
+    });
+
+    // Safely append avatar if present
+    if (values.avatar instanceof File) {
+      formData.append('avatar', values.avatar);
+    }
+
+    // Make API request
+    const endpoint = refToken ? '/register/referral' : '/register';
+    const queryParam = refToken ? `refToken=${refToken}` : `token=${token}`;
+    
+    const response = await axios.post(
+      `http://localhost:3001/api${endpoint}?${queryParam}`,
+      formData,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }
+    );
+
+    if (response.data) {
+      setGlobalState('user', response.data);
+      setGlobalState('isUserLogged', true);
+      toast.success(t('Register_user_added'));
+      router.push(`/${uiLanguage.value}/dashboard`);
+    }
+  } catch (error) {
+    console.error('Registration error:', error);
+    
+    if (axios.isAxiosError(error)) {
+      const errorMessage = error.response?.data?.message || t('Register_error_register');
+      toast.error(errorMessage);
+    } else {
+      toast.error(t('Register_error_register'));
+    }
+  }
+};
 
   const fileInputName = 'avatar';
   return (

@@ -12,7 +12,6 @@ type VerifyCallback = (
   error: Error | null,
   user: { _id: string } | { email: string },
 ) => void;
-
 @Injectable()
 export class MagicLoginStrategy extends PassportStrategy(Strategy) {
   private readonly logger = new Logger(MagicLoginStrategy.name);
@@ -31,14 +30,24 @@ export class MagicLoginStrategy extends PassportStrategy(Strategy) {
       secret: Settings.SECRET,
       callbackUrl: `/authorization`,
       sendMagicLink: async (destination: string, href: string) => {
+        // Extract the token properly from href
+        const token = href.includes('token=') ? href.split('token=')[1] : href;
+        
+        const registerUrl = `${Settings.FRONTEND_URL}/${
+          I18nContext.current().lang
+        }/register?token=${token}`;
+      
+        this.logger.debug(`Generated registration URL: ${registerUrl}`);
+        this.logger.debug(`Token: ${token}`);
+      
         const template = this.templatesService.renderTemplate(
           'registrationConfirm',
           {
-            url:
-              Settings.FRONTEND_URL + '/' + I18nContext.current().lang + href,
+            url: registerUrl,
             name: destination,
           },
         );
+      
         try {
           await this.mailService.send({
             to: destination,
@@ -47,14 +56,11 @@ export class MagicLoginStrategy extends PassportStrategy(Strategy) {
             }),
             html: template,
           });
-
           this.logger.debug(
-            `sending email to ${destination} with link ${
-              Settings.FRONTEND_URL + '/' + I18nContext.current().lang + href
-            }`,
+            `Sending email to ${destination} with link ${registerUrl}`,
           );
         } catch (error) {
-          console.error(`Error sending magic link to ${destination}: ${error}`);
+          this.logger.error(`Error sending magic link to ${destination}: ${error}`);
         }
       },
       verify: async (

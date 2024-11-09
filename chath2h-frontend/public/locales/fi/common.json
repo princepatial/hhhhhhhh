@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "Haluat lähettää viestin osoitteeseen",
   "CategoriesHelpPage_furtherDevelopment_text_2": "Se, miten ja millä tekijöillä kolikoihin voidaan vaikuttaa, on tiede sinänsä. Muun muassa tämä artikkeli on mielenkiintoinen:",
   "dashboard_to_areas": "Kategoriat",
-  "dashboard_to_areas_description": "Lisää uusi tarve tai tarjous"
+  "dashboard_to_areas_description": "Lisää uusi tarve tai tarjous",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

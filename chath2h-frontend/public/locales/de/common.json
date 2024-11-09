@@ -858,5 +858,11 @@
   "UserActivityStatus_send_message": "Sie möchten eine Nachricht senden an",
   "CategoriesHelpPage_furtherDevelopment_text_2": "Wie und durch welche Faktoren Münzen beeinflusst werden können, ist eine Wissenschaft für sich. Interessant ist u.a. dieser Artikel:",
   "dashboard_to_areas": "Kategorien",
-  "dashboard_to_areas_description": "Einen neuen Bedarf oder ein neues Angebot hinzufügen"
+  "dashboard_to_areas_description": "Einen neuen Bedarf oder ein neues Angebot hinzufügen",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

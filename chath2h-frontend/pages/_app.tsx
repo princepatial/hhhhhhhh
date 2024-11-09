@@ -167,10 +167,10 @@ axios.interceptors.response.use(
     }
     switch (status) {
       case 404:
-        Router.push('/');
+        Router.push('');
         break;
       case 403:
-        Router.push('/');
+        Router.push('');
         break;
 
       default:

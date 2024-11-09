@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "Du ønsker å sende en melding til",
   "CategoriesHelpPage_furtherDevelopment_text_2": "Hvordan og av hvilke faktorer mynter kan påvirkes, er en vitenskap i seg selv. Denne artikkelen er blant annet interessant:",
   "dashboard_to_areas": "Kategorier",
-  "dashboard_to_areas_description": "Legg til et nytt behov eller tilbud"
+  "dashboard_to_areas_description": "Legg til et nytt behov eller tilbud",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

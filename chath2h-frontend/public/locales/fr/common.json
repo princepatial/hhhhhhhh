@@ -858,5 +858,11 @@
   "UserActivityStatus_send_message": "Vous souhaitez envoyer un message à",
   "CategoriesHelpPage_furtherDevelopment_text_2": "Comment et par quels facteurs les pièces de monnaie peuvent être influencées est une science en soi. Cet article est intéressant, entre autres :",
   "dashboard_to_areas": "Catégories",
-  "dashboard_to_areas_description": "Ajouter un nouveau besoin ou une nouvelle offre"
+  "dashboard_to_areas_description": "Ajouter un nouveau besoin ou une nouvelle offre",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

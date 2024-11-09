@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "메시지를 보내려는 대상",
   "CategoriesHelpPage_furtherDevelopment_text_2": "코인이 어떤 요인에 의해 어떻게 영향을 받을 수 있는지는 그 자체로 과학입니다. 이 기사는 무엇보다도 흥미롭습니다:",
   "dashboard_to_areas": "카테고리",
-  "dashboard_to_areas_description": "새로운 요구 사항 또는 오퍼 추가"
+  "dashboard_to_areas_description": "새로운 요구 사항 또는 오퍼 추가",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

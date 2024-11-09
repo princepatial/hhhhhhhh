@@ -850,5 +850,11 @@
   "dashboard_to_areas_description": "Dodaj nową potrzebę lub ofertę",
   "areas_other": "__TRANSLATION_MISSING__",
   "CategoriesHelp_work_other": "__TRANSLATION_MISSING__",
-  "SelectToken_other": "__TRANSLATION_MISSING__"
+  "SelectToken_other": "__TRANSLATION_MISSING__",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

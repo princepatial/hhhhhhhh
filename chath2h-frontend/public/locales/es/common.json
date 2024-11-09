@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "Desea enviar un mensaje a",
   "CategoriesHelpPage_furtherDevelopment_text_2": "Cómo y por qué factores se puede influir en las monedas es una ciencia en sí misma. Este artículo es interesante, entre otras cosas:",
   "dashboard_to_areas": "Categorías",
-  "dashboard_to_areas_description": "Añadir una nueva necesidad u oferta"
+  "dashboard_to_areas_description": "Añadir una nueva necesidad u oferta",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

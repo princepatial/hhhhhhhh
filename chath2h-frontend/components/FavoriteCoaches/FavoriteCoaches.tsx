@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import useImageUrl from 'hooks/getImageUrl';
 
 const FavoriteCoaches = ({
-  coaches,
+  coaches = [],
   categoriesClass
 }: {
   coaches: CoachesWithCategories[];

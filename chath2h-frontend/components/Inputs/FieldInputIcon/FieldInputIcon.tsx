@@ -15,6 +15,7 @@ type Props = {
   icon?: string;
   iconAlt?: string;
   iconStyle?: string;
+  disabled?: boolean;
 };
 
 const FieldInputIcon = ({

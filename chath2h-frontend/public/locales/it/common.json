@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "Si vuole inviare un messaggio a",
   "CategoriesHelpPage_furtherDevelopment_text_2": "Come e da quali fattori le monete possano essere influenzate è una scienza a sé stante. Questo articolo è interessante, tra le altre cose:",
   "dashboard_to_areas": "Categorie",
-  "dashboard_to_areas_description": "Aggiungere una nuova esigenza o offerta"
+  "dashboard_to_areas_description": "Aggiungere una nuova esigenza o offerta",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

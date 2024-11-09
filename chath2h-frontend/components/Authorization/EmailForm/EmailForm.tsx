@@ -22,27 +22,17 @@ const EmailForm = () => {
   });
 
   const [messageSendStatus, setMessageSendStatus] = useState<MessageStatus>('default');
-  
   const handleSubmit = async (values: Form) => {
     try {
-      // Updated API endpoint to match your backend
-      const response = await axios.post('http://localhost:3001/api/auth/login', {
+      await axios.post(`http://localhost:3001/api/auth`, {
         destination: values.email
-      }, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
       });
-      
-      if (response.status === 200 || response.status === 201) {
-        setMessageSendStatus('success');
-      } else {
-        setMessageSendStatus('failed');
-      }
     } catch (err) {
-      console.error('Error sending email:', err);
+      console.log(err);
       setMessageSendStatus('failed');
+      return;
     }
+    setMessageSendStatus('success');
   };
 
   const Header = () => {
@@ -62,43 +52,45 @@ const EmailForm = () => {
             initialValues={{ email: '' }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}>
-            {({ errors, touched, isValid }) => (
-              <Form className={styles.form}>
-                <Header />
-                <span className={styles.subtitle}>{t('EmailForm_send_activation_link')}</span>
-                <FieldInputIcon
-                  name="email"
-                  placeholder={t('EmailForm_email_input_placeholder')}
-                  type="email"
-                  styleInputWrapper={styles.inputWrapper}
-                  styleInput={styles.input}
-                  error={errors?.email}
-                  touched={touched?.email}
-                  icon={EmailIcon}
-                  iconAlt="email-icon"
-                />
-                <div className={styles.buttons}>
-                  <Button
-                    type="submit"
-                    disabled={!isValid}
-                    text={t('EmailForm_submit_button_text_register')}
-                    style={styles.button}
+            {({ errors, touched, isValid }) => {
+              return (
+                <Form className={styles.form}>
+                  <Header />
+                  <span className={styles.subtitle}>{t('EmailForm_send_activation_link')}</span>
+                  <FieldInputIcon
+                    name="email"
+                    placeholder={t('EmailForm_email_input_placeholder')}
+                    type="email"
+                    styleInputWrapper={styles.inputWrapper}
+                    styleInput={styles.input}
+                    error={errors?.email}
+                    touched={touched?.email}
+                    icon={EmailIcon}
+                    iconAlt="email-icon"
                   />
-                  <Button
-                    type="submit"
-                    disabled={!isValid}
-                    text={t('EmailForm_submit_button_text_login')}
-                    style={styles.button}
-                  />
-                </div>
+                  <div className={styles.buttons}>
+                    <Button
+                      type="submit"
+                      disabled={!isValid}
+                      text={t('EmailForm_submit_button_text_register')}
+                      style={styles.button}
+                    />
+                    <Button
+                      type="submit"
+                      disabled={!isValid}
+                      text={t('EmailForm_submit_button_text_login')}
+                      style={styles.button}
+                    />
+                  </div>
 
-                {messageSendStatus === 'failed' && (
-                  <span className={classNames(styles.errorText, styles.messageBack)}>
-                    {t('EmailForm_send_activation_link_error')}
-                  </span>
-                )}
-              </Form>
-            )}
+                  {messageSendStatus === 'failed' && (
+                    <span className={classNames(styles.errorText, styles.messageBack)}>
+                      {t('EmailForm_send_activation_link_error')}
+                    </span>
+                  )}
+                </Form>
+              );
+            }}
           </Formik>
         </div>
       ) : (

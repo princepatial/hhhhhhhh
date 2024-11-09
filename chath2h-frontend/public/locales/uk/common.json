@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "Ви хочете відправити повідомлення на",
   "CategoriesHelpPage_furtherDevelopment_text_2": "Як і за допомогою яких чинників можна впливати на монети - це ціла наука. Ця стаття цікава, в тому числі, і тим, що в ній розповідається про це:",
   "dashboard_to_areas": "Категорії",
-  "dashboard_to_areas_description": "Додайте нову потребу або пропозицію"
+  "dashboard_to_areas_description": "Додайте нову потребу або пропозицію",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }

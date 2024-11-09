@@ -1,4 +1,4 @@
-import { Transform } from 'class-transformer';
+import { Transform,Type } from 'class-transformer';
 import {
   IsArray,
   IsEnum,
@@ -34,6 +34,7 @@ export class RegistrationDto {
 
   @IsArray()
   @IsNotEmpty()
+  @Type(() => String)
   language: string[];
 
   @IsString()

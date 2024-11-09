@@ -3,9 +3,10 @@ import { config } from 'dotenv';
 
 config();
 
+
 export const Settings: ISettings = {
-  BACKEND_URL: process.env.BACKEND_URL || 'http://localhost:3001', //Backend URL
-  FRONTEND_URL: process.env.FRONTEND_URL || 'http://localhost:3000', //Frontend URL
+  BACKEND_URL: process.env.BACKEND_URL || 'http://localhost:3000', //Backend URL
+  FRONTEND_URL: process.env.FRONTEND_URL || 'http://localhost:3001', //Frontend URL
   INITIAL_TOKEN_AMOUNT: Number(process.env.INITIAL_TOKEN_AMOUNT) || 100, //Initial amount of tokens user recieves after registration
   DB_HOST: process.env.DB_HOST || '127.0.0.1', //Database connection string Host
   DB_PORT: process.env.DB_PORT || '27017', //Database connection string Port
@@ -47,3 +48,8 @@ export const Settings: ISettings = {
   H2H_TOKEN_ADMIN_WALLET_ADDRESS: process.env.H2H_TOKEN_ADMIN_WALLET_ADDRESS || '',
   OUTDATED_TOKENS_DAYS: Number(process.env.OUTDATED_TOKENS_DAYS) || 1
 };
+
+// Log settings after defining
+console.log('FRONTEND_URL:', Settings.FRONTEND_URL);
+console.log('BACKEND_URL:', Settings.BACKEND_URL);
+console.log('SECRET:', Settings.SECRET ? 'Set' : 'Not Set');

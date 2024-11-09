@@ -825,5 +825,11 @@
   "UserActivityStatus_send_message": "にメッセージを送りたい。",
   "CategoriesHelpPage_furtherDevelopment_text_2": "コインがどのように、どのような要因によって影響を受けるかは、それ自体が科学である。中でもこの記事は興味深い：",
   "dashboard_to_areas": "カテゴリー",
-  "dashboard_to_areas_description": "新しいニーズやオファーを追加する"
+  "dashboard_to_areas_description": "新しいニーズやオファーを追加する",
+  "Register_token_expired": "__TRANSLATION_MISSING__",
+  "Register_error": "__TRANSLATION_MISSING__",
+  "Register_redirecting": "__TRANSLATION_MISSING__",
+  "Register_missing_tokens": "__TRANSLATION_MISSING__",
+  "Invalid_or_missing_token": "__TRANSLATION_MISSING__",
+  "Register_token_required": "__TRANSLATION_MISSING__"
 }
