@@ -12,6 +12,7 @@ type VerifyCallback = (
   error: Error | null,
   user: { _id: string } | { email: string },
 ) => void;
+
 @Injectable()
 export class MagicLoginStrategy extends PassportStrategy(Strategy) {
   private readonly logger = new Logger(MagicLoginStrategy.name);
@@ -33,21 +34,32 @@ export class MagicLoginStrategy extends PassportStrategy(Strategy) {
         // Extract the token properly from href
         const token = href.includes('token=') ? href.split('token=')[1] : href;
         
-        const registerUrl = `${Settings.FRONTEND_URL}/${
-          I18nContext.current().lang
-        }/register?token=${token}`;
-      
-        this.logger.debug(`Generated registration URL: ${registerUrl}`);
-        this.logger.debug(`Token: ${token}`);
-      
+        // Check if the user is already logged in
+        const user = await this.authService.validateUser(destination);
+        let redirectUrl: string;
+        
+        if (user) {
+          // User is already logged in, redirect to dashboard
+          redirectUrl = `${Settings.FRONTEND_URL}/${
+            I18nContext.current().lang
+          }/dashboard`;
+          this.logger.debug(`User already logged in, redirecting to dashboard`);
+        } else {
+          // User is not logged in, generate registration link
+          redirectUrl = `${Settings.FRONTEND_URL}/${
+            I18nContext.current().lang
+          }/register?token=${token}`;
+          this.logger.debug(`Generated registration URL: ${redirectUrl}`);
+        }
+
         const template = this.templatesService.renderTemplate(
           'registrationConfirm',
           {
-            url: registerUrl,
+            url: redirectUrl,
             name: destination,
           },
         );
-      
+
         try {
           await this.mailService.send({
             to: destination,
@@ -57,7 +69,7 @@ export class MagicLoginStrategy extends PassportStrategy(Strategy) {
             html: template,
           });
           this.logger.debug(
-            `Sending email to ${destination} with link ${registerUrl}`,
+            `Sending email to ${destination} with link ${redirectUrl}`,
           );
         } catch (error) {
           this.logger.error(`Error sending magic link to ${destination}: ${error}`);

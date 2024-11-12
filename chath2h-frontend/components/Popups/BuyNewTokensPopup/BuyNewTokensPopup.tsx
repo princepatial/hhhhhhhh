@@ -26,7 +26,7 @@ const BuyNewTokensPopup = ({
 }: Props) => {
   const { t } = useTranslation('common');
   const getPaymentSession = async () => {
-    const registerResponse = await axios.post('/payment/session', {quantity: activeAmount});
+    const registerResponse = await axios.post('http://localhost:3001/api/payment/session', {quantity: activeAmount});
     window.location.href = registerResponse.data.redirectUrl;
   };
   const [activeAmount, setActiveAmount] = useState<number>(0); 

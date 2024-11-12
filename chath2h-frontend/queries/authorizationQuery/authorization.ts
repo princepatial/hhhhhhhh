@@ -2,7 +2,7 @@ import axios from 'axios';
 import { NextRouter } from 'next/router';
 import { toast } from 'react-toastify';
 
-const url = '/auth';
+const url = 'http://localhost:3001/api/auth';
 
 export const getAuthorization = async (router: NextRouter, token?: string | string[]) => {
   try {
